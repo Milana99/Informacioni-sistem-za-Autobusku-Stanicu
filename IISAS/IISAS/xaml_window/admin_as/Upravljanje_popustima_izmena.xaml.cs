@@ -50,15 +50,26 @@ namespace IISAS.xaml_window.admin_as
 
         private void Izmeni(object sender, RoutedEventArgs e)
         {
-            voznja.popustPenzioner = float.Parse(tbPenzionerska.Text);
-            voznja.popustPovratna = float.Parse(tbPovratna.Text);
-            voznja.popustStudentska = float.Parse(tbStudentska.Text);
-            var asContext = new ASContext();
-            var voznjaRepository = new Repository.VoznjaRepository(asContext);
-            var voznjaService = new Service.VoznjaService(voznjaRepository);
-            voznjaService.Update(voznja);
-            upravljanje_Popustima.LoadAll();
-            this.Close();
+            if (!Regex.IsMatch(tbPovratna.Text, @"^(0(\.[0-9]+)?|1)$") || !Regex.IsMatch(tbStudentska.Text, @"^(0(\.[0-9]+)?|1)$")
+                || !Regex.IsMatch(tbPenzionerska.Text, @"^(0(\.[0-9]+)?|1)$"))
+            {
+                MessageBox.Show("Molimo unesite ispravno!", "Upozorenje!", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                voznja.popustPenzioner = float.Parse(tbPenzionerska.Text);
+                voznja.popustPovratna = float.Parse(tbPovratna.Text);
+                voznja.popustStudentska = float.Parse(tbStudentska.Text);
+                var asContext = new ASContext();
+                var voznjaRepository = new Repository.VoznjaRepository(asContext);
+                var voznjaService = new Service.VoznjaService(voznjaRepository);
+                voznjaService.Update(voznja);
+                upravljanje_Popustima.LoadAll();
+                this.Close();
+                MessageBox.Show("Uspešno ste izmenili popuste karte!", "Uspešno!", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+                
+            
         }
 
         private void Izadji(object sender, RoutedEventArgs e)
