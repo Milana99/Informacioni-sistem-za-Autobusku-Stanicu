@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62687F0F-1324-40AE-AE45-3E51146AF6CE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>IISAS</RootNamespace>
+    <AssemblyName>IISAS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Abstractions, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Abstractions.3.1.32\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.3.1.32\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.32\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.7.1\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Migrations\202309212107372_InitialCreate.cs" />
+    <Compile Include="Migrations\202309212107372_InitialCreate.designer.cs">
+      <DependentUpon>202309212107372_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\ASContext.cs" />
+    <Compile Include="Model\Autobus.cs" />
+    <Compile Include="Model\Autoprevoznik.cs" />
+    <Compile Include="Model\Karta.cs" />
+    <Compile Include="Model\Korisnik.cs" />
+    <Compile Include="Model\Peron.cs" />
+    <Compile Include="Model\Stanica.cs" />
+    <Compile Include="Model\Voznja.cs" />
+    <Compile Include="Repository\AutobusRepository.cs" />
+    <Compile Include="Repository\AutoprevoznikRepository.cs" />
+    <Compile Include="Repository\GenericRepository.cs" />
+    <Compile Include="Repository\KartaRepository.cs" />
+    <Compile Include="Repository\KorisnikRepository.cs" />
+    <Compile Include="Repository\PeronRepository.cs" />
+    <Compile Include="Repository\StanicaRepository.cs" />
+    <Compile Include="Repository\VoznjaRepository.cs" />
+    <Compile Include="Service\AutobusService.cs" />
+    <Compile Include="Service\AutoprevoznikService.cs" />
+    <Compile Include="Service\GenericService.cs" />
+    <Compile Include="Service\KartaService.cs" />
+    <Compile Include="Service\KorisnikService.cs" />
+    <Compile Include="Service\PeronService.cs" />
+    <Compile Include="Service\StanicaService.cs" />
+    <Compile Include="Service\VoznjaService.cs" />
+    <Compile Include="xaml_window\admin\Upravljanje_statusima_korisnika.xaml.cs">
+      <DependentUpon>Upravljanje_statusima_korisnika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\admin\Upravljanje_statusima_korisnika_izmena.xaml.cs">
+      <DependentUpon>Upravljanje_statusima_korisnika_izmena.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\admin_as\Manipulacija_cene_voznje.xaml.cs">
+      <DependentUpon>Manipulacija_cene_voznje.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\admin_as\Manipulacija_cene_voznje_dodaj.xaml.cs">
+      <DependentUpon>Manipulacija_cene_voznje_dodaj.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\admin_as\manipulacija_cene_voznje_izmena.xaml.cs">
+      <DependentUpon>manipulacija_cene_voznje_izmena.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\admin_as\Upravljanje_popustima.xaml.cs">
+      <DependentUpon>Upravljanje_popustima.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\admin_as\Upravljanje_popustima_detaljnije.xaml.cs">
+      <DependentUpon>Upravljanje_popustima_detaljnije.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\admin_as\Upravljanje_popustima_izmena.xaml.cs">
+      <DependentUpon>Upravljanje_popustima_izmena.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\admin_as\Upravljanje_terminima.xaml.cs">
+      <DependentUpon>Upravljanje_terminima.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\admin_as\Upravljanje_terminima_dodaj.xaml.cs">
+      <DependentUpon>Upravljanje_terminima_dodaj.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\admin_as\Upravljanje_terminima_izmena.xaml.cs">
+      <DependentUpon>Upravljanje_terminima_izmena.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\admin_as\Upravljanje_terminima_izmeni.xaml.cs">
+      <DependentUpon>Upravljanje_terminima_izmeni.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\korisnik_stan_usluga\Kupovina_karata_karta.xaml.cs">
+      <DependentUpon>Kupovina_karata_karta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\korisnik_stan_usluga\Kupovina_karata_kupi.xaml.cs">
+      <DependentUpon>Kupovina_karata_kupi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\korisnik_stan_usluga\Kupovina_karata_prava.xaml.cs">
+      <DependentUpon>Kupovina_karata_prava.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\korisnik_stan_usluga\Kupovina_karte.xaml.cs">
+      <DependentUpon>Kupovina_karte.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata.xaml.cs">
+      <DependentUpon>Pregled_kupljenih_karata.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata_detaljnije.xaml.cs">
+      <DependentUpon>Pregled_kupljenih_karata_detaljnije.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata_ocena.xaml.cs">
+      <DependentUpon>Pregled_kupljenih_karata_ocena.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\korisnik_stan_usluga\Pregled_rezervisanih_karata.xaml.cs">
+      <DependentUpon>Pregled_rezervisanih_karata.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\korisnik_stan_usluga\Pregled_rezervisanih_karata_detaljnije.xaml.cs">
+      <DependentUpon>Pregled_rezervisanih_karata_detaljnije.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\korisnik_stan_usluga\RedVoznjeDetaljnije.xaml.cs">
+      <DependentUpon>RedVoznjeDetaljnije.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\korisnik_stan_usluga\RedVoznjeSedista.xaml.cs">
+      <DependentUpon>RedVoznjeSedista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\korisnik_stan_usluga\Rezervacija_karata.xaml.cs">
+      <DependentUpon>Rezervacija_karata.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\korisnik_stan_usluga\Rezervacija_karata_karta.xaml.cs">
+      <DependentUpon>Rezervacija_karata_karta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\korisnik_stan_usluga\Rezervacija_karata_rezervisi.xaml.cs">
+      <DependentUpon>Rezervacija_karata_rezervisi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\obican_korisnik\Red_voznje_detaljnije.xaml.cs">
+      <DependentUpon>Red_voznje_detaljnije.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\obican_korisnik\Uvid_u_perone.xaml.cs">
+      <DependentUpon>Uvid_u_perone.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\Registracija.xaml.cs">
+      <DependentUpon>Registracija.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\salterski_radnik\Izdate_karte.xaml.cs">
+      <DependentUpon>Izdate_karte.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\salterski_radnik\Izdate_karte_detaljnije.xaml.cs">
+      <DependentUpon>Izdate_karte_detaljnije.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\salterski_radnik\Izdavanje_karata.xaml.cs">
+      <DependentUpon>Izdavanje_karata.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\salterski_radnik\Izdavanje_karata_karta.xaml.cs">
+      <DependentUpon>Izdavanje_karata_karta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\salterski_radnik\Izdavanje_karata_kupi.xaml.cs">
+      <DependentUpon>Izdavanje_karata_kupi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\salterski_radnik\Pregled_rezervisanih_karata.xaml.cs">
+      <DependentUpon>Pregled_rezervisanih_karata.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\salterski_radnik\Pregled_rezervisanih_karata_detaljnije.xaml.cs">
+      <DependentUpon>Pregled_rezervisanih_karata_detaljnije.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\salterski_radnik\Rezervacija_karata.xaml.cs">
+      <DependentUpon>Rezervacija_karata.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\salterski_radnik\Rezervacija_karata_karta.xaml.cs">
+      <DependentUpon>Rezervacija_karata_karta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\salterski_radnik\Rezervacija_karata_rezervisi.xaml.cs">
+      <DependentUpon>Rezervacija_karata_rezervisi.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="xaml_window\admin\Upravljanje_statusima_korisnika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\admin\Upravljanje_statusima_korisnika_izmena.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\admin_as\Manipulacija_cene_voznje.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\admin_as\Manipulacija_cene_voznje_dodaj.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\admin_as\manipulacija_cene_voznje_izmena.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\admin_as\Upravljanje_popustima.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\admin_as\Upravljanje_popustima_detaljnije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\admin_as\Upravljanje_popustima_izmena.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\admin_as\Upravljanje_terminima.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\admin_as\Upravljanje_terminima_dodaj.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\admin_as\Upravljanje_terminima_izmena.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\admin_as\Upravljanje_terminima_izmeni.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\korisnik_stan_usluga\Kupovina_karata_karta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\korisnik_stan_usluga\Kupovina_karata_kupi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\korisnik_stan_usluga\Kupovina_karata_prava.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\korisnik_stan_usluga\Kupovina_karte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata_detaljnije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata_ocena.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\korisnik_stan_usluga\Pregled_rezervisanih_karata.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\korisnik_stan_usluga\Pregled_rezervisanih_karata_detaljnije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\korisnik_stan_usluga\RedVoznjeDetaljnije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\korisnik_stan_usluga\RedVoznjeSedista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\korisnik_stan_usluga\Rezervacija_karata.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\korisnik_stan_usluga\Rezervacija_karata_karta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\korisnik_stan_usluga\Rezervacija_karata_rezervisi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\obican_korisnik\Red_voznje_detaljnije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\obican_korisnik\Uvid_u_perone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\Registracija.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\salterski_radnik\Izdate_karte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\salterski_radnik\Izdate_karte_detaljnije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\salterski_radnik\Izdavanje_karata.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\salterski_radnik\Izdavanje_karata_karta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\salterski_radnik\Izdavanje_karata_kupi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\salterski_radnik\Pregled_rezervisanih_karata.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\salterski_radnik\Pregled_rezervisanih_karata_detaljnije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\salterski_radnik\Rezervacija_karata.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\salterski_radnik\Rezervacija_karata_karta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\salterski_radnik\Rezervacija_karata_rezervisi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Migrations\202309212107372_InitialCreate.resx">
+      <DependentUpon>202309212107372_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\salterski_radnik\slike\_Pngtree_blue technology sense abstract floating_5439768.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\korisnik_stan_usluga\slike\Worldwide connection blue background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\slike\kissclipart-ticket-clipart-bus-event-tickets-paper-6e350616894f4b78.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\admin\slike\rocketship-303591_1280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\admin\slike\us.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\admin_as\slike\rocketship-303591_1280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\admin_as\slike\Slidebooks Consulting _ Business &amp; Consulting Toolkits.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\admin_as\slike\us.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\admin_as\slike\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\korisnik_stan_usluga\slike\QR_code_for_mobile_English_Wikipedia.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\korisnik_stan_usluga\slike\rocketship-303591_1280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\korisnik_stan_usluga\slike\Slidebooks Consulting _ Business &amp; Consulting Toolkits.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\korisnik_stan_usluga\slike\us.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\korisnik_stan_usluga\slike\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\obican_korisnik\slike\rocketship-303591_1280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\obican_korisnik\slike\_Pngtree_blue technology sense abstract floating_5439768.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\obican_korisnik\slike\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\obican_korisnik\slike\Slidebooks Consulting _ Business &amp; Consulting Toolkits.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\korisnik_stan_usluga\slike\_Pngtree_blue technology sense abstract floating_5439768.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\slike\space.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\obican_korisnik\slike\space.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\korisnik_stan_usluga\slike\space.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\admin\slike\space.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\admin\slike\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\admin_as\slike\space.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\admin_as\slike\_Pngtree_blue technology sense abstract floating_5439768.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\salterski_radnik\slike\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\salterski_radnik\slike\QR_code_for_mobile_English_Wikipedia.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\salterski_radnik\slike\rocketship-303591_1280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\salterski_radnik\slike\Slidebooks Consulting _ Business &amp; Consulting Toolkits.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\salterski_radnik\slike\space.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\salterski_radnik\slike\us.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="xaml_window\salterski_radnik\slike\Worldwide connection blue background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ASDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ASDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>ASDatabase.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

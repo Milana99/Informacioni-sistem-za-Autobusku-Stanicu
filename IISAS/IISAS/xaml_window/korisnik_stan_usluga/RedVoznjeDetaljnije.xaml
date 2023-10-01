@@ -1,0 +1,122 @@
+﻿<Window x:Class="IISAS.xaml_window.korisnik_stan_usluga.RedVoznjeDetaljnije"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IISAS.xaml_window.korisnik_stan_usluga"
+        mc:Ignorable="d"
+        Title="RedVoznjeDetaljnije" Height="450" Width="600" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="110"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="slike\Slidebooks Consulting _ Business &amp; Consulting Toolkits.jpg" Stretch="UniformToFill" Opacity="0.9"/>
+        </Grid.Background>
+
+        <Border Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Grid.RowSpan="6" BorderBrush="#FF1D3045" BorderThickness="3"  Margin="20,20,20,60">
+            <StackPanel Grid.Row="0" Grid.ColumnSpan="5" Orientation="Vertical" >
+                <StackPanel.Background>
+                    <SolidColorBrush Color="#FFE0E9F3" Opacity="0.9"/>
+                </StackPanel.Background>
+                <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="4" Margin="20, 60,0,0" Grid.RowSpan="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontWeight="Bold"  Margin="20,0,70,0">Početna stanica:</Label>
+                        <Label  Name="lbPocetnaStanica">Početna stanica</Label>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="4" Margin="20, 0,0,0" Grid.RowSpan="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontWeight="Bold"  Margin="20,0,75,0">Krajnja stanica:</Label>
+                        <Label  Name="lbKrajnjaStanica">Krajnja stanica</Label>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="4" Margin="20, 0,0,0" Grid.RowSpan="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontWeight="Bold"  Margin="20,0,100,0">Prevoznik:</Label>
+                        <Label  Name="lbPrevoznik">Prevoznik</Label>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="4" Margin="20, 0,0,0" Grid.RowSpan="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontWeight="Bold"  Margin="20,0,117,0">Datum:</Label>
+                        <Label  Name="lbDatum">16/06/2022</Label>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="4" Margin="20, 0,0,0" Grid.RowSpan="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontWeight="Bold"  Margin="20,0,73,0">Vreme polaska:</Label>
+                        <Label  Name="lbVremePolaska">16:00:00</Label>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="4" Margin="20, 0,0,0" Grid.RowSpan="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontWeight="Bold"  Margin="20,0,73,0">Vreme dolaska:</Label>
+                        <Label  Name="lbVremeDolaska">18:00:00</Label>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="4" Margin="20, 0,0,0" Grid.RowSpan="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontWeight="Bold"  Margin="20,0,40,0">Preko(Autoput/Sela):</Label>
+                        <Label  Name="lbPreko">Sela</Label>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="4" Margin="20, 0,0,0" Grid.RowSpan="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontWeight="Bold"  Margin="20,0,124,0">Peron:</Label>
+                        <Label  Name="lbPeron">Peron</Label>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="4" Margin="20, 0,0,0" Grid.RowSpan="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontWeight="Bold"  Margin="20,0,61,0">Preostalih karata:</Label>
+                        <Label Name="lbPreostalihKarata">16</Label>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            
+        </Border>
+
+        <Label Grid.Column="2" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30">  Red vožnje</Label>
+       
+        
+        <Button Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="3" HorizontalAlignment="Right" Width="120" Height="40" Background="#FFEDEDED" Foreground="Black" Margin="0,0,20,0" FontSize="15" Click="Back" BorderBrush="#FF4D4D4D" BorderThickness="1,1,2,2">
+            <StackPanel Orientation="Horizontal" >
+                <Label FontSize="20" Background="#FFEDEDED" Foreground="Black" FontFamily="Segoe MDL2 Assets" Content="&#xE72B;" Margin="0,0,0,0"></Label>
+                <Label Foreground="Black" FontSize="15">Izađi</Label>
+            </StackPanel>
+        </Button>
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal">
+            <Border Width="40" Height="40" Margin="2,0,0,0" Grid.Column="0" >
+                <Border.Background>
+                    <ImageBrush ImageSource="slike\rocketship-303591_1280.png" Opacity="0.4"/>
+                </Border.Background>
+
+            </Border>
+            <Label FontWeight="SemiBold" VerticalAlignment="Center" FontSize="20" FontFamily="Castellar">
+                <Label.Foreground>
+                    <SolidColorBrush Color="#FFE0E9F3" Opacity="0.5"/>
+                </Label.Foreground>
+                <Label.Background>
+                    <SolidColorBrush Color="Transparent" Opacity="0.3"/>
+                </Label.Background> RaKeta
+            </Label>
+        </StackPanel>
+
+    </Grid>
+</Window>

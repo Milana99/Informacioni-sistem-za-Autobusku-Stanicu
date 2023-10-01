@@ -1,0 +1,31 @@
+﻿<Window x:Class="IISAS.xaml_window.admin_as.manipulacija_cene_voznje_izmena"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IISAS.xaml_window.admin_as"
+        mc:Ignorable="d"
+        Title="Raketa" Icon="slike\space.ico" WindowStartupLocation="CenterScreen" Height="300" Width="400" Background="#FFE0E9F3">
+    <Grid>
+        <Label Margin="0,20,0,20" HorizontalAlignment="Center"  VerticalAlignment="Top" FontSize="40">Izmena cene</Label>
+        <StackPanel Orientation="Horizontal">
+            <Label Margin="70,0,0,0" Height="30" FontSize="15" FontWeight="Bold">Upišite cenu:</Label>
+            <TextBox Height="30" MaxLength="5" FontSize="15" Name="tbCena" Margin="30,0,0,0"  Width="120" TextChanged="tbCenaTextChanged"></TextBox>
+        </StackPanel>
+        <Label Margin="196,150,0,0" Name="lbErrorCena"></Label>
+            <StackPanel Margin="0,180,0,0" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button Width="120" Height="40" Background="#FFEDEDED" Foreground="Black" Margin="0,10,11,0" FontSize="15" Click="Potvrdi" BorderBrush="#FF4D4D4D" BorderThickness="1,1,2,2">
+                <StackPanel Orientation="Horizontal" >
+                    <Label FontSize="20" Background="#FFEDEDED" Foreground="Black" FontFamily="Segoe MDL2 Assets" Content="&#xE70F;" Margin="0,0,0,0"></Label>
+                    <Label Foreground="Black" FontSize="15">Izmeni</Label>
+                </StackPanel>
+            </Button>
+            <Button Width="120" Height="40" Background="#FFEDEDED" Foreground="Black" Margin="0,10,0,0" FontSize="15" Click="Izadji" BorderBrush="#FF4D4D4D" BorderThickness="1,1,2,2">
+                <StackPanel Orientation="Horizontal" >
+                    <Label FontSize="20" Background="#FFEDEDED" Foreground="Black" FontFamily="Segoe MDL2 Assets" Content="&#xE72B;" Margin="0,0,0,0"></Label>
+                    <Label Foreground="Black" FontSize="15">Izađi</Label>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,212 @@
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\bin\Debug\IISAS.exe.config
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\bin\Debug\IISAS.exe
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\bin\Debug\IISAS.pdb
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\MainWindow.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\App.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\IISAS_MarkupCompile.cache
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\IISAS_MarkupCompile.lref
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\MainWindow.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\IISAS.g.resources
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\IISAS.Properties.Resources.resources
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\IISAS.csproj.GenerateResource.cache
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\IISAS.csproj.CoreCompileInputs.cache
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\IISAS.exe
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\IISAS.pdb
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\RedVoznjeDetaljnije.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\RedVoznjeDetaljnije.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Kupovina_karte.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Kupovina_karte.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\RedVoznjeSedista.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\RedVoznjeSedista.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Kupovina_karata_prava.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Kupovina_karata_prava.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Kupovina_karata_kupi.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Kupovina_karata_kupi.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Kupovina_karata_karta.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Kupovina_karata_karta.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata_detaljnije.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata_ocena.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata_detaljnije.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata_ocena.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_terminima.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_terminima_dodaj.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_terminima_izmena.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_terminima_izmeni.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_terminima.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_terminima_dodaj.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_terminima_izmena.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_terminima_izmeni.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\Login.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\Login.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\IISAS.csprojAssemblyReference.cache
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Manipulacija_cene_voznje.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Manipulacija_cene_voznje_dodaj.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Manipulacija_cene_voznje.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Manipulacija_cene_voznje_dodaj.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\manipulacija_cene_voznje_izmena.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_popustima.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_popustima_detaljnije.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_popustima_izmena.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\manipulacija_cene_voznje_izmena.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_popustima.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_popustima_detaljnije.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_popustima_izmena.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin\Upravljanje_statusima_korisnika.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin\Upravljanje_statusima_korisnika_izmena.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin\Upravljanje_statusima_korisnika.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\admin\Upravljanje_statusima_korisnika_izmena.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\obican_korisnik\Red_voznje_detaljnije.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\obican_korisnik\Red_voznje_detaljnije.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\obican_korisnik\Uvid_u_perone.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\obican_korisnik\Uvid_u_perone.baml
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\Registracija.g.cs
+C:\Users\pc\OneDrive\Radna površina\Milanna\Milana4\IIS\AS\IISAS\IISAS\obj\Debug\xaml_window\Registracija.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\IISAS.exe.config
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\IISAS.exe
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\IISAS.pdb
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\IISAS.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\MainWindow.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin\Upravljanje_statusima_korisnika.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin\Upravljanje_statusima_korisnika_izmena.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Manipulacija_cene_voznje.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Manipulacija_cene_voznje_dodaj.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\manipulacija_cene_voznje_izmena.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_popustima.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_popustima_detaljnije.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_popustima_izmena.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_terminima.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_terminima_dodaj.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_terminima_izmena.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_terminima_izmeni.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Kupovina_karata_karta.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Kupovina_karata_kupi.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Kupovina_karata_prava.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Kupovina_karte.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata_detaljnije.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata_ocena.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\RedVoznjeDetaljnije.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\RedVoznjeSedista.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\Login.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\obican_korisnik\Red_voznje_detaljnije.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\obican_korisnik\Uvid_u_perone.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\Registracija.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\App.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\IISAS_MarkupCompile.cache
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\IISAS_MarkupCompile.lref
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\MainWindow.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin\Upravljanje_statusima_korisnika.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin\Upravljanje_statusima_korisnika_izmena.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Manipulacija_cene_voznje.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Manipulacija_cene_voznje_dodaj.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\manipulacija_cene_voznje_izmena.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_popustima.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_popustima_detaljnije.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_popustima_izmena.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_terminima.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_terminima_dodaj.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_terminima_izmena.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\admin_as\Upravljanje_terminima_izmeni.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Kupovina_karata_karta.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Kupovina_karata_kupi.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Kupovina_karata_prava.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Kupovina_karte.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata_detaljnije.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata_ocena.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\RedVoznjeDetaljnije.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\RedVoznjeSedista.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\Login.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\obican_korisnik\Red_voznje_detaljnije.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\obican_korisnik\Uvid_u_perone.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\Registracija.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\IISAS.g.resources
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\IISAS.Properties.Resources.resources
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\IISAS.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\IISAS.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\IISAS.exe
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\IISAS.pdb
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Rezervacija_karata.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Rezervacija_karata.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Rezervacija_karata_karta.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Rezervacija_karata_rezervisi.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Rezervacija_karata_karta.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Rezervacija_karata_rezervisi.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregled_rezervisanih_karata.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregled_rezervisanih_karata.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregled_rezervisanih_karata_detaljnije.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregled_rezervisanih_karata_detaljnije.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Izdavanje_karata.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Izdavanje_karata.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Izdavanje_karata_karta.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Izdavanje_karata_kupi.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Izdavanje_karata_karta.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Izdavanje_karata_kupi.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Izdate_karte.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Izdate_karte.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Izdate_karte_detaljnije.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Izdate_karte_detaljnije.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Rezervacija_karata.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Rezervacija_karata_karta.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Rezervacija_karata_rezervisi.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Rezervacija_karata.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Rezervacija_karata_karta.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Rezervacija_karata_rezervisi.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Pregled_rezervisanih_karata.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Pregled_rezervisanih_karata_detaljnije.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Pregled_rezervisanih_karata.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\xaml_window\salterski_radnik\Pregled_rezervisanih_karata_detaljnije.baml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\ASDatabase.mdf
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\ASDatabase_log.ldf
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\System.Buffers.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\System.Collections.Immutable.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\System.Memory.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\System.Buffers.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\System.Collections.Immutable.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\System.Memory.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\IISAS_Content.g.cs
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\IISAS.csproj.CopyComplete
+C:\Users\Administrator\Desktop\projekat\IISAS\IISAS\obj\Debug\IISAS.Migrations.InitialCreate.resources

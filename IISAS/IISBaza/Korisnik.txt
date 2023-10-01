@@ -1,0 +1,7 @@
+1,Rasa,Rad,Korisnik,Standardan,rasa.rad@gmail.com,Rasa1,Rasa123=
+2,Milana,Rad,Korisnik,Student,milana.rad@gmail.com,Milana,Milana123=
+3,Milana,Radovanovic,Admin,Standardan,milana@gmail.com,MilanaAd,Milana123=
+4,Radovan,Radovanovic,AdminAS,Standardan,radovan@gmail.com,Radovan,Radovan123=
+5,Ljiljana,Radovanovic,SalterskiRadnik,Standardan,ljiljana@gmail.com,Ljiljana,Ljiljana123=
+6,luka,avakumovic,Korisnik,Standardan,lukaavakumovic@gmail.com,lukas,Luka123@
+7,Milan,Radovanovic,Korisnik,Standardan,milan@gmail.com,Milan,Milan123=

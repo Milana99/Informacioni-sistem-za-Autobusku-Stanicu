@@ -1,0 +1,149 @@
+﻿<Window x:Class="IISAS.xaml_window.admin_as.Upravljanje_popustima_izmena"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IISAS.xaml_window.admin_as"
+        mc:Ignorable="d"
+       Title="Raketa" Icon="slike\space.ico" Height="600" Width="600" Background="#FF7FA3C9" WindowStartupLocation="CenterScreen" >
+    <Grid>
+       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="110"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+            <Border.Background>
+                <ImageBrush ImageSource="slike\_Pngtree_blue technology sense abstract floating_5439768.png" Stretch="UniformToFill" TileMode="FlipY" Opacity="1">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Border.Background>
+        </Border>
+
+
+        <Border Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="3" Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5">
+            <Border.Background>
+                <ImageBrush ImageSource="slike\_Pngtree_blue technology sense abstract floating_5439768.png" Stretch="UniformToFill" TileMode="FlipY" Opacity="1">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Border.Background>
+        </Border>
+
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Width="350" Grid.RowSpan="5" BorderBrush="#FF1D3045"  Margin="20,10,20,0">
+            <StackPanel Grid.Row="0" Grid.ColumnSpan="6" Orientation="Vertical" >
+                <StackPanel.Background>
+                    <SolidColorBrush Color="#FFE0E9F3" Opacity="0.9"/>
+                </StackPanel.Background>
+                <StackPanel.Effect>
+                    <DropShadowEffect BlurRadius="11" Direction="300" ShadowDepth="3" Opacity="0.8"></DropShadowEffect>
+                </StackPanel.Effect>
+            </StackPanel>
+        </Border>
+
+        <Label  Grid.Column="0" Grid.ColumnSpan="6" Margin="0,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30">Izmena Popusta</Label>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" Margin="20, 70,0,0" Grid.RowSpan="6">
+            <StackPanel Orientation="Horizontal">
+                <Label FontWeight="Bold" Margin="30,0,0,0" FontSize="14">Početna stanica:</Label>
+                <Label Width="120" Margin="50,0,0,0" Name="lbPocetna" FontSize="14" ></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                <Label FontWeight="Bold" Margin="30,0,0,0" FontSize="14">Krajnja stanica:</Label>
+                <Label Width="120" Margin="57,0,0,0" Name="lbKrajnja" FontSize="14" ></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                <Label FontWeight="Bold" Margin="30,0,0,0" FontSize="14">Datum:</Label>
+                <Label Width="120" Margin="108,0,0,0" Name="lbDatum" FontSize="14" ></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                <Label FontWeight="Bold" Margin="30,0,0,0" FontSize="14">Polazno vreme:</Label>
+                <Label Width="120" Margin="55,0,0,0" Name="lbPolaznoVreme" FontSize="14" ></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                <Label FontWeight="Bold" Margin="30,0,0,0" FontSize="14">Dolazno vreme:</Label>
+                <Label Width="120" Margin="54,0,0,0" Name="lbDolaznoVreme" FontSize="14" ></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                <Label FontWeight="Bold" Margin="30,0,0,0" FontSize="14">Prevoznik:</Label>
+                <Label Width="120" Margin="88,0,0,0" Name="lbPrevoznik" FontSize="14" ></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                <Label FontWeight="Bold" Margin="30,0,0,0" FontSize="14">Autobus:</Label>
+                <Label Width="120" Margin="98,0,0,0" Name="lbAutobus" FontSize="14" ></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                <Label FontWeight="Bold" Margin="30,0,0,0" FontSize="14">Preko:</Label>
+                <Label Grid.Row="5" Grid.Column="2" Name="lbPreko" Margin="114,5,0,0" Grid.ColumnSpan="3" Width="200">
+                </Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                <Label FontWeight="Bold" Margin="30,0,0,0" FontSize="14">Peron:</Label>
+                <Label Width="120" Margin="114,0,0,0" Name="lbPeron" FontSize="14" >p</Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                <Label FontWeight="Bold" Margin="30,0,0,0" FontSize="14">Cena:</Label>
+                <Label Width="120" Margin="120,0,0,0" Name="lbCena" FontSize="14" >c</Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                <Label FontWeight="Bold" Margin="30,0,0,0" FontSize="14">Popust povratna:</Label>
+                <TextBox Width="120" Height="25" Margin="43,0,0,0" Name="tbPovratna" FontSize="14" TextChanged="tbPovratna_TextChanged" ></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                <Label FontWeight="Bold" Margin="30,0,0,0" FontSize="14">Popust studentska:</Label>
+                <TextBox Width="120" Height="25" Margin="31,0,0,0" Name="tbStudentska" FontSize="14" TextChanged="tbStudentska_TextChanged" ></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                <Label FontWeight="Bold" Margin="30,0,0,0" FontSize="14">Popust penzionerska:</Label>
+                <TextBox Width="120" Height="25" Margin="16,0,0,0" Name="tbPenzionerska" FontSize="14"  TextChanged="tbPenzionerska_TextChanged"></TextBox>
+            </StackPanel>
+            <Label Margin="130,0,0,0" Width="150" Height="30" FontSize="10" Name="lbError"></Label>
+
+
+
+        </StackPanel>
+        <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button Width="120" Height="40" Background="#FFEDEDED" Foreground="Black" Margin="0,10,11,0" FontSize="15" Click="Izmeni" BorderBrush="#FF4D4D4D" BorderThickness="1,1,2,2">
+                <StackPanel Orientation="Horizontal" >
+                    <Label FontSize="20" Background="#FFEDEDED" Foreground="Black" FontFamily="Segoe MDL2 Assets" Content="&#xE70F;" Margin="0,0,0,0"></Label>
+                    <Label Foreground="Black" FontSize="15">Izmeni</Label>
+                </StackPanel>
+            </Button>
+            <Button Width="120" Height="40" Background="#FFEDEDED" Foreground="Black" Margin="0,10,20,0" FontSize="15" Click="Izadji" BorderBrush="#FF4D4D4D" BorderThickness="1,1,2,2">
+                <StackPanel Orientation="Horizontal" >
+                    <Label FontSize="20" Background="#FFEDEDED" Foreground="Black" FontFamily="Segoe MDL2 Assets" Content="&#xE72B;" Margin="0,0,0,0"></Label>
+                    <Label Foreground="Black" FontSize="15">Izađi</Label>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+
+       
+
+    </Grid>
+</Window>
