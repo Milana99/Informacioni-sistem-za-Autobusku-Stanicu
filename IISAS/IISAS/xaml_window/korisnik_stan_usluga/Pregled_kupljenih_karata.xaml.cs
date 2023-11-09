@@ -35,6 +35,7 @@ namespace IISAS.xaml_window.korisnik_stan_usluga
             var kartaRepository = new Repository.KartaRepository(asContext);
             kartaService = new Service.KartaService(kartaRepository);
             Load();
+            
         }
 
         public void Load()
@@ -43,35 +44,12 @@ namespace IISAS.xaml_window.korisnik_stan_usluga
             var kartaRepository = new Repository.KartaRepository(asContext);
             kartaService = new Service.KartaService(kartaRepository);
             lvDataBinding.Items.Clear();
-
            
-            karte = kartaService.getKarteByKorisnikOrdered(korisnik);
-          
+            karte = kartaService.getKarteByKorisnikVazecaOrdered(korisnik);
+
+            rbVazeca.IsChecked = true;
 
 
-            foreach (Model.Karta karta in karte)
-            {
-
-                if (karta.rezervisana == 0)
-                {
-                    DateTime dt1 = DateTime.Parse(karta.voznja.datum.ToString()).Add(TimeSpan.Parse(karta.voznja.pol_sat.ToString()));
-                    DateTime dt2 = DateTime.Now;
-                    TimeSpan ts = dt1 - dt2;
-                    double totalTime = ts.TotalHours;
-
-                    if (totalTime <= 0)
-                    {
-                        karta.vazeca = "Nevazeca";
-
-                        kartaService.Update(karta);
-                    }
-                    
-                    lvDataBinding.Items.Add(karta);
-                    
-                }
-            }
-               
-            
         }
 
         private void RedVoznje(object sender, RoutedEventArgs e)
@@ -145,10 +123,17 @@ namespace IISAS.xaml_window.korisnik_stan_usluga
         {
             if (lvDataBinding.SelectedItems.Count > 0)
             {
+                
                 Model.Karta selectedKarta = (Model.Karta)lvDataBinding.SelectedItems[0];
-                var det = new IISAS.xaml_window.korisnik_stan_usluga.Pregled_kupljenih_karata_ocena(this, selectedKarta);
-            
-                det.ShowDialog();
+
+                if(selectedKarta.vazeca == "Nevazeca")
+                {
+                    var det = new IISAS.xaml_window.korisnik_stan_usluga.Pregled_kupljenih_karata_ocena(this, selectedKarta);
+
+                    det.ShowDialog();
+                }
+                else
+                    MessageBox.Show("Ne možete oceniti kartu čija vožnja nije istekla!", "Upozorenje!", MessageBoxButton.OK, MessageBoxImage.Warning);
 
             }
             else

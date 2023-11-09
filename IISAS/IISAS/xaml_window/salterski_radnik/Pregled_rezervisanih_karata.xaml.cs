@@ -40,7 +40,7 @@ namespace IISAS.xaml_window.salterski_radnik
         {
 
             lvDataBinding.Items.Clear();
-            karte = kartaService.GetAllOrdered();
+            karte = kartaService.GetAllOrderedBySalterskiRadnik();
 
             foreach (Model.Karta karta in karte)
             {
@@ -111,7 +111,7 @@ namespace IISAS.xaml_window.salterski_radnik
             }
             else
             {
-                MessageBox.Show("Molim Vas selektujte vožnju za koju želite da vidite detalje!", "Upozorenje!", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Molim Vas selektujte vožnju za koju želite da vidite detalje!", "Raketa", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
@@ -138,32 +138,33 @@ namespace IISAS.xaml_window.salterski_radnik
             if (tbPretraga.Text != "Pretraga karata...")
             {
                 List<Model.Karta> karte = new List<Model.Karta>();
-                if (rbDatum.IsChecked == true)
-                {
-                    karte = kartaService.filterByDatum(tbPretraga.Text);
-                }
-                else if (rbPolaznaStanica.IsChecked == true)
-                {
-                    karte = kartaService.filterByPolazna(tbPretraga.Text);
-                }
-                else if (rbKrajnjaStanica.IsChecked == true)
-                {
-                    karte = kartaService.filterByKrajnja(tbPretraga.Text);
-                }
-                else if (rbPrevoznik.IsChecked == true)
-                {
-                    karte = kartaService.filterByPrevoznik(tbPretraga.Text);
-                }
+                 if (rbDatum.IsChecked == true)
+                 {
+                     karte = kartaService.filterByDatumSR(tbPretraga.Text);
+                 }
+                 else if (rbIme.IsChecked == true)
+                 {
+                     karte = kartaService.filterByImeSR(tbPretraga.Text);
+                 }
+                 else if (rbPrezime.IsChecked == true)
+                 {
+                     karte = kartaService.filterByPrezimeSR(tbPretraga.Text);
+                 }
+                 else if (rbIdKarte.IsChecked == true)
+                 {
+                     karte = kartaService.filterByIdKarteSR(tbPretraga.Text);
+                 }
 
-                lvDataBinding.Items.Clear();
-                foreach (Model.Karta karta in karte)
-                {
-                    if (karta.rezervisana == 1)
-                    {
-                        lvDataBinding.Items.Add(karta);
-                    }
+                 lvDataBinding.Items.Clear();
+                 foreach (Model.Karta karta in karte)
+                 {
+                     if (karta.rezervisana == 1)
+                     {
+                         lvDataBinding.Items.Add(karta);
+                     }
 
-                }
+                 }
+             
             }
         }
 
@@ -172,7 +173,7 @@ namespace IISAS.xaml_window.salterski_radnik
             if (lvDataBinding.SelectedItems.Count > 0)
             {
                 Model.Karta selectedKarta = (Model.Karta)lvDataBinding.SelectedItems[0];
-                MessageBoxResult mr = MessageBox.Show("Da li ste sigurni da želite da otkažete kartu?", "Potvrda", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                MessageBoxResult mr = MessageBox.Show("Da li ste sigurni da želite da otkažete kartu?", "Raketa", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (mr == MessageBoxResult.Yes)
                 {
                     kartaService.DeleteElement(selectedKarta.id_karte);
@@ -181,12 +182,12 @@ namespace IISAS.xaml_window.salterski_radnik
                     var voznjaService = new Service.VoznjaService(voznjaRepository);
                     voznjaService.AddBrojKarata(selectedKarta.voznja);
                     Load();
-                    MessageBox.Show("Uspešno ste otkazali kartu!", "Uspešno!", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Uspešno ste otkazali kartu!", "Raketa", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             else
             {
-                MessageBox.Show("Molim Vas selektujte kartu koju želite da otkažete!", "Upozorenje!", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Molim Vas selektujte kartu koju želite da otkažete!", "Raketa", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
@@ -195,19 +196,19 @@ namespace IISAS.xaml_window.salterski_radnik
             if (lvDataBinding.SelectedItems.Count > 0)
             {
                 Model.Karta selectedKarta = (Model.Karta)lvDataBinding.SelectedItems[0];
-                MessageBoxResult mr = MessageBox.Show("Da li ste sigurni da želite da kupite kartu?", "Potvrda", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                MessageBoxResult mr = MessageBox.Show("Da li ste sigurni da želite da kupite kartu?", "Raketa", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (mr == MessageBoxResult.Yes)
                 {
                     selectedKarta.rezervisana = 0;
                     kartaService.Update(selectedKarta);
                     Load();
-                    MessageBox.Show("Uspešno ste kupili kartu!", "Uspešno!", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Uspešno ste kupili kartu!", "Raketa", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
 
             }
             else
             {
-                MessageBox.Show("Molim Vas selektujte vožnju za koju želite da vidite detalje!", "Upozorenje!", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Molim Vas selektujte vožnju za koju želite da vidite detalje!", "Raketa", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
     }

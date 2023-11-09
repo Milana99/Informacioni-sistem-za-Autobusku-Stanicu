@@ -74,8 +74,10 @@
                 <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="4" Margin="0,40,0,0" Grid.RowSpan="5">
                     <StackPanel Orientation="Horizontal">
                         <Label FontWeight="Bold"  Margin="20,0,48,0">Korisničko ime:</Label>
-                        <TextBox Width="120"  Name="tbUsername"></TextBox>
+                        <TextBox Width="120"  Name="tbKorisnickoIme" TextChanged="tbUsername_TextChanged"></TextBox>
                     </StackPanel>
+                    <Label Width="120" FontSize="10" Margin="100,0,0,0" Name="lbErrorKorisnickoIme"></Label>
+
                 </StackPanel>
 
             </StackPanel>

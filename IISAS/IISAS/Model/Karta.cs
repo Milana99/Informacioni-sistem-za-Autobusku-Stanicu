@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IISAS.xaml_window.korisnik_stan_usluga;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -55,75 +56,31 @@ namespace IISAS.Model
         [NotMapped]
         public Korisnik korisnik { get; set; }
 
-        public int rezervisana {get; set;}
+        public int rezervisana { get; set; }
         public String datum { get; set; }
 
         public String salterski_radnik { get; set; }
 
+        public String ime { get; set; }
+        public String prezime { get; set; }
+        public int? ocena { get; set; }
+
+        public void OceniKartu(int ocena)
+        {
+            this.ocena = ocena;
+            var asContext = new ASContext();
+            var kartaRepository = new Repository.KartaRepository(asContext);
+            var kartaService = new Service.KartaService(kartaRepository);
+            var voznjaRepository = new Repository.VoznjaRepository(asContext);
+            var voznjaService = new Service.VoznjaService(voznjaRepository);
+            kartaService.Update(this);
+            List<Model.Karta> karte = kartaService.GetAllByVoznja(this.voznja);
+            voznjaService.CalculateOcena(this.voznja, karte);
+        }
+
         public Karta() { }
-        public Karta(int voznjaId, int broj_sedista, int cena, String vrsta_karte, String vazeca, int korisnikId)
-        {
-            var asContext = new ASContext();
-            var voznjaRepository = new Repository.VoznjaRepository(asContext);
-            var korisnikRepository = new Repository.KorisnikRepository(asContext);
-            var voznjaService = new Service.VoznjaService(voznjaRepository);
-            var korisnikService = new Service.KorisnikService(korisnikRepository);
 
-            _voznjaId = voznjaId;
-            _korisnikId = korisnikId;
-            this.voznja = voznjaService.GetOne(voznjaId);
-            this.broj_sedista = broj_sedista;
-            this.cena = cena;
-            this.vrsta_karte = vrsta_karte;
-            this.vazeca = vazeca;
-            this.obrisan = false;
-            this.korisnik = korisnikService.GetOne(korisnikId);
-        }
-
-        public Karta(int voznjaId, int broj_sedista, int cena, String vrsta_karte, String vazeca, int korisnikId, int rezervisana)
-        {
-
-            var asContext = new ASContext();
-            var voznjaRepository = new Repository.VoznjaRepository(asContext);
-            var korisnikRepository = new Repository.KorisnikRepository(asContext);
-            var voznjaService = new Service.VoznjaService(voznjaRepository);
-            var korisnikService = new Service.KorisnikService(korisnikRepository);
-
-            _voznjaId = voznjaId;
-            _korisnikId = korisnikId;
-            this.voznja = voznjaService.GetOne(voznjaId);
-            this.broj_sedista = broj_sedista;
-            this.cena = cena;
-            this.vrsta_karte = vrsta_karte;
-            this.vazeca = vazeca;
-            this.obrisan = false;
-            this.korisnik = korisnikService.GetOne(korisnikId);
-            this.rezervisana = rezervisana;
-        }
-
-        public Karta(int voznjaId, int broj_sedista, int cena, String vrsta_karte, String vazeca, int korisnikId, int rezervisana, String datum)
-        {
-
-            var asContext = new ASContext();
-            var voznjaRepository = new Repository.VoznjaRepository(asContext);
-            var korisnikRepository = new Repository.KorisnikRepository(asContext);
-            var voznjaService = new Service.VoznjaService(voznjaRepository);
-            var korisnikService = new Service.KorisnikService(korisnikRepository);
-
-            _voznjaId = voznjaId;
-            _korisnikId = korisnikId;
-            this.voznja = voznjaService.GetOne(voznjaId);
-            this.broj_sedista = broj_sedista;
-            this.cena = cena;
-            this.vrsta_karte = vrsta_karte;
-            this.vazeca = vazeca;
-            this.obrisan = false;
-            this.korisnik = korisnikService.GetOne(korisnikId);
-            this.rezervisana = rezervisana;
-            this.datum = datum;
-        }
-
-        public Karta(int voznjaId, int broj_sedista, int cena, String vrsta_karte, String vazeca, int korisnikId, int rezervisana, String datum, string salterski_radnik)
+        public Karta(int voznjaId, int broj_sedista, int cena, String vrsta_karte, String vazeca, int korisnikId, int rezervisana, String datum, string salterski_radnik, string ime, string prezime)
         {
             var asContext = new ASContext();
             var voznjaRepository = new Repository.VoznjaRepository(asContext);
@@ -143,6 +100,9 @@ namespace IISAS.Model
             this.rezervisana = rezervisana;
             this.datum = datum;
             this.salterski_radnik = salterski_radnik;
+            this.ime = ime;
+            this.prezime = prezime;
+            this.ocena = null;
         }
     }
 }

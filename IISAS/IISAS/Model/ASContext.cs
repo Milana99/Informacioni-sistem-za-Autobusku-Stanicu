@@ -26,7 +26,7 @@ namespace IISAS.Model
         public DbSet<Peron> peroni { get; set; }
         public DbSet<Stanica> stanice { get; set; }
         public DbSet<Voznja> voznje { get; set; }
-
+        public DbSet<Obavestenje> obavestenje { get;set; }
         
     }
 }

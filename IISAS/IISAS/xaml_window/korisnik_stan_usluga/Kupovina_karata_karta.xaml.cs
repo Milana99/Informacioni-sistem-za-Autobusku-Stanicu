@@ -79,7 +79,7 @@ namespace IISAS.xaml_window.korisnik_stan_usluga
             var kartaRepository = new Repository.KartaRepository(new ASContext());
             var kartaService = new Service.KartaService(kartaRepository);
             Model.Karta karta = new Model.Karta(kupovina.voznja.id_voz, int.Parse(lbSediste.Content.ToString()),
-                int.Parse(lbCena.Content.ToString()), lbVrstaKarte.Content.ToString() + "-" + lbStatusPutnika.Content.ToString(), "Vazeca", korisnik.id_kor, 0, lbVremeKupovine.Content.ToString(), "Korisnik");
+                int.Parse(lbCena.Content.ToString()), lbVrstaKarte.Content.ToString() + "-" + lbStatusPutnika.Content.ToString(), "Vazeca", korisnik.id_kor, 0, lbVremeKupovine.Content.ToString(), "Korisnik", korisnik.ime, korisnik.prezime);
 
             kartaService.CreateElement(karta);
             kupovina.voznja.brSlobodnih--;
@@ -91,7 +91,7 @@ namespace IISAS.xaml_window.korisnik_stan_usluga
             kkp.dpDatum.SelectedDate = DateTime.Now;
             kupovina.Close();
             this.Close();
-            MessageBox.Show("Uspešno ste kupili kartu!", "Uspešno!", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Uspešno ste kupili kartu!", "Raketa!", MessageBoxButton.OK, MessageBoxImage.Information);
 
 
         }

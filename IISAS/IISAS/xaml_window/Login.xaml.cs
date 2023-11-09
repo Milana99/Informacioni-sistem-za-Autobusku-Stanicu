@@ -55,7 +55,7 @@ namespace IISAS.xaml_window
                 }
                 else if(korisnik.tip_korisnika == "Korisnik")
                 {
-                    var kk= new IISAS.xaml_window.korisnik_stan_usluga.Kupovina_karte(korisnik);
+                    var kk= new IISAS.xaml_window.korisnik_stan_usluga.Kupovina_karata_prava(korisnik);
                     kk.Show();
                     this.Close();
                 }

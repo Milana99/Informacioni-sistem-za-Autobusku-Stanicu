@@ -72,7 +72,7 @@
                             <SolidColorBrush Color="#FF1D3045" Opacity="0"/>
                         </ListViewItem.Background>
                         <StackPanel Orientation="Horizontal" >
-                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE787;" Margin="0,0,10,0">
+                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE787;" Margin="0,0,0,0">
                                 <Label.Background>
                                     <SolidColorBrush Color="#FF1D3045" Opacity="0"/>
                                 </Label.Background>
@@ -88,7 +88,7 @@
                             <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
                         </ListViewItem.Background>
                         <StackPanel Orientation="Horizontal" >
-                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE14D;" Margin="0,0,10,0">
+                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE14D;" Margin="0,0,0,0">
                                 <Label.Background>
                                     <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
                                 </Label.Background>
@@ -101,7 +101,7 @@
                             <SolidColorBrush Color="#FF1D3045"/>
                         </ListViewItem.Background>
                         <StackPanel Orientation="Horizontal" >
-                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE8FD;" Margin="0,0,10,0">
+                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE8FD;" Margin="0,0,0,0">
                                 <Label.Background>
                                     <SolidColorBrush Color="#FF1D3045"/>
                                 </Label.Background>
@@ -114,7 +114,7 @@
                             <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
                         </ListViewItem.Background>
                         <StackPanel Orientation="Horizontal" >
-                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEF3F;" Margin="0,0,10,0">
+                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEF3F;" Margin="0,0,0,0">
                                 <Label.Background>
                                     <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
                                 </Label.Background>
@@ -127,12 +127,12 @@
                             <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
                         </ListViewItem.Background>
                         <StackPanel Orientation="Horizontal" >
-                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xF571;" Margin="0,0,10,0">
+                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xF571;" Margin="0,0,0,0">
                                 <Label.Background>
                                     <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
                                 </Label.Background>
                             </Label>
-                            <Label Foreground="White">Pregled rezervisanih karata</Label>
+                            <Label Foreground="White">Kupovina rezervisanih karata</Label>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>
@@ -206,10 +206,10 @@
         <StackPanel Grid.Column="2" Margin="0,0,0,0" Grid.ColumnSpan="4" Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Center">
             <Label FontWeight="Bold" FontSize="15">Validnost karte:</Label>
             <StackPanel Orientation="Horizontal">
-                <RadioButton Name="rbSve" FontSize="15" Margin="47,0,0,0"  Content="Sve"  Height="20" Checked="rbSve_Checked" />
-                <RadioButton Name="rbVazeca" FontSize="15"  Margin="10,0,10,0"   Content="Važeće"  Height="20" Checked="rbVazeca_Checked" />
-                <RadioButton Name="rbNevazeca" FontSize="15"  Content="Nevažeće"  Height="20" Checked="rbNevazeca_Checked"/>
-
+                    <RadioButton Name="rbVazeca" FontSize="15"  Margin="47,0,10,0"  Content="Važeće"  Height="20" Checked="rbVazeca_Checked" />
+                    <RadioButton Name="rbNevazeca" FontSize="15"  Content="Nevažeće"  Height="20" Checked="rbNevazeca_Checked"/>
+                    <RadioButton Name="rbSve" FontSize="15" Margin="10,0,10,0"  Content="Sve"  Height="20" Checked="rbSve_Checked" />
+               
             </StackPanel>
               </StackPanel>
         </Border>
@@ -222,42 +222,25 @@
                 </ListView.Background>
                 <ListView.View>
                     <GridView >
-                        <GridViewColumn  Header="Prevoznik" Width="Auto" DisplayMemberBinding="{Binding voznja.autobus.autoprev.naziv_prev}"></GridViewColumn>
-                        <GridViewColumn Header="Datum" Width="Auto" DisplayMemberBinding="{Binding voznja.datum}"></GridViewColumn>
+                         <GridViewColumn Header="Datum" Width="Auto" DisplayMemberBinding="{Binding voznja.datum}"></GridViewColumn>
 
                         <GridViewColumn Header="Polazna stanica" Width="Auto" DisplayMemberBinding="{Binding voznja.polazna_stan.naz_stan}"></GridViewColumn>
                         <GridViewColumn Header="Krajnja stanica" Width="Auto" DisplayMemberBinding="{Binding voznja.krajnja_stan.naz_stan}"></GridViewColumn>
-
-                        <GridViewColumn Header="Preko" Width="Auto" DisplayMemberBinding="{Binding voznja.preko}" />
+                        <GridViewColumn  Header="Prevoznik" Width="Auto" DisplayMemberBinding="{Binding voznja.autobus.autoprev.naziv_prev}"></GridViewColumn>
                         <GridViewColumn Header="Polazak" DisplayMemberBinding="{Binding voznja.pol_sat}" Width="Auto"></GridViewColumn>
                         <GridViewColumn Header="Dolazak" DisplayMemberBinding="{Binding voznja.dol_sat}" Width="Auto"></GridViewColumn>
-                        <GridViewColumn Header="Cena" DisplayMemberBinding="{Binding cena}" Width="Auto"/>
+
+                        <GridViewColumn Header="Preko" Width="Auto" DisplayMemberBinding="{Binding voznja.preko}" />
+                         <GridViewColumn Header="Cena" DisplayMemberBinding="{Binding cena}" Width="Auto"/>
                         <GridViewColumn Header="Status karte" Width="Auto" DisplayMemberBinding="{Binding vrsta_karte}"></GridViewColumn>
                         <GridViewColumn Header="Datum kupovine" Width="Auto" DisplayMemberBinding="{Binding datum}"></GridViewColumn>
                         <GridViewColumn Header="Validnost karte" Width="Auto" DisplayMemberBinding="{Binding vazeca}"></GridViewColumn>
+                        <GridViewColumn Header="Ocena" Width="Auto" DisplayMemberBinding="{Binding ocena}"></GridViewColumn>
+                        <GridViewColumn Header="Ocena vožnje" Width="Auto" DisplayMemberBinding="{Binding voznja.ocena}"></GridViewColumn>
 
                     </GridView>
                 </ListView.View>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <WrapPanel>
-                            <ListViewItem>
-                                <TextBlock Text="{Binding ExaminationId}" FontWeight="Bold" />
-                            </ListViewItem>
-                            <TextBlock Text="{Binding StartTime}" FontWeight="Bold" />
-
-                            <TextBlock Text="{Binding EndTime}" FontWeight="Bold" />
-
-                            <TextBlock Text="{Binding doctor.User.Username}" FontWeight="Bold" />
-
-                            <TextBlock Text="{Binding patient.User.Username}" FontWeight="Bold" />
-
-                            <TextBlock Text="{Binding room}" FontWeight="Bold" />
-
-                        </WrapPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </ListView>
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="4" Orientation="Horizontal" Margin="30,0,0,0">
             <Button  Width="120" Height="40" Background="#FFEDEDED" Foreground="Black" Margin="40,0,0,0" FontSize="15" Click="Obrisi" BorderBrush="#FF4D4D4D" BorderThickness="1,1,2,2">

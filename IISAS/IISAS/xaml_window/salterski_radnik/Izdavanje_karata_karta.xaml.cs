@@ -73,18 +73,22 @@ namespace IISAS.xaml_window.salterski_radnik
             var kartaRepository = new Repository.KartaRepository(new ASContext());
             var kartaService = new Service.KartaService(kartaRepository);
 
-            Model.Korisnik korisnikk = korisnikService.GetOne(kupovina.tbUsername.Text.ToString());
+            Model.Korisnik korisnikk = korisnikService.GetOne(kupovina.tbKorisnickoIme.Text.ToString());
+
+            //Todo change this  to textbox.text
+            var ime = "Jon";
+            var prezime = "Doe";
 
             if (korisnikk == null)
             {
                 Model.Karta karta = new Model.Karta(kupovina.voznja.id_voz, int.Parse(lbSediste.Content.ToString()),
-                    int.Parse(lbCena.Content.ToString()), lbVrstaKarte.Content.ToString() + "-" + lbStatusPutnika.Content.ToString(), "Vazeca", korisnik.id_kor, 0, lbVremeKupovine.Content.ToString(), korisnik.username);
+                    int.Parse(lbCena.Content.ToString()), lbVrstaKarte.Content.ToString() + "-" + lbStatusPutnika.Content.ToString(), "Vazeca", korisnik.id_kor, 0, lbVremeKupovine.Content.ToString(), korisnik.username, ime, prezime);
                 kartaService.CreateElement(karta);
             }
             else
             {
                 Model.Karta karta = new Model.Karta(kupovina.voznja.id_voz, int.Parse(lbSediste.Content.ToString()),
-                  int.Parse(lbCena.Content.ToString()), lbVrstaKarte.Content.ToString() + "-" + lbStatusPutnika.Content.ToString(), "Vazeca", korisnikk.id_kor, 0, lbVremeKupovine.Content.ToString(), korisnik.username);
+                  int.Parse(lbCena.Content.ToString()), lbVrstaKarte.Content.ToString() + "-" + lbStatusPutnika.Content.ToString(), "Vazeca", korisnikk.id_kor, 0, lbVremeKupovine.Content.ToString(), korisnik.username, korisnikk.ime, korisnikk.prezime);
                 kartaService.CreateElement(karta);
             }
  
@@ -99,7 +103,7 @@ namespace IISAS.xaml_window.salterski_radnik
 
             kupovina.Close();
             this.Close();
-            MessageBox.Show("Uspešno ste kupili kartu!", "Uspešno!", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Uspešno ste kupili kartu!", "Raketa", MessageBoxButton.OK, MessageBoxImage.Information);
 
         }
 

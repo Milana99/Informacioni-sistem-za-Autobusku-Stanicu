@@ -55,7 +55,7 @@ namespace IISAS.xaml_window.korisnik_stan_usluga
         public void LoadAll()
         {
             lvDataBinding.Items.Clear();
-            voznje = voznjaService.OrderedVoznja();
+            voznje = voznjaService.GetAllRecent();
 
             foreach (Model.Voznja voznja in voznje)
             {
@@ -137,6 +137,14 @@ namespace IISAS.xaml_window.korisnik_stan_usluga
                 voznje = voznjaService.SearchByParam(cbPocetnaStanica.Text, cbKrajnjaStanica.Text, tbVreme.Text, dpDatum.Text);
                 lvDataBinding.Items.Clear();
 
+                if (cbPrevoznik.SelectedItem != null)
+                {
+                    voznje = voznjaService.SearchByPrevoznik(voznje, cbPrevoznik.Text);
+                }
+
+                voznje = voznjaService.FilterByTipPuta(cbAutoput.IsChecked.Value, cbSporedniPut.IsChecked.Value, voznje);
+
+
                 foreach (Model.Voznja voznja in voznje)
                 {
                     lvDataBinding.Items.Add(voznja);
@@ -157,7 +165,18 @@ namespace IISAS.xaml_window.korisnik_stan_usluga
             prk.Show();
             this.Close();
         }
+        private void KrajnjaStanicaChanged(object sender, SelectionChangedEventArgs e)
+        {
+            cbPrevoznik.Items.Clear();
+            foreach (Voznja voznja in voznjaService.FilterByKrajnja(cbKrajnjaStanica.Text.ToString()))
+            {
+                if (!cbPrevoznik.Items.Contains(voznja.autobus.autoprev.naziv_prev))
+                {
+                    cbPrevoznik.Items.Add(voznja.autobus.autoprev.naziv_prev);
+                }
+            }
+        }
 
-       
+
     }
 }

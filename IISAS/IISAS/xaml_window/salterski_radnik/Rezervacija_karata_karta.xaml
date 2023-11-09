@@ -67,6 +67,12 @@
                     <Label Grid.Column="2" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top"  FontSize="30">Autobuska Karta</Label>
                     <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="4" Margin="20, 0,0,0" Grid.RowSpan="5">
                         <StackPanel Orientation="Horizontal">
+                            <Label FontWeight="Bold" Margin="20,0,87,0">Id rezervacije:</Label>
+                            <Label  Name="lbIdKarte">Id rezervacije</Label>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="4" Margin="20, 0,0,0" Grid.RowSpan="5">
+                        <StackPanel Orientation="Horizontal">
                             <Label FontWeight="Bold" Margin="20,0,70,0">Početna stanica:</Label>
                             <Label  Name="lbPocetnaStanica">Početna stanica</Label>
                         </StackPanel>

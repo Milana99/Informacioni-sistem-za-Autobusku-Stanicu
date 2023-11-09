@@ -42,7 +42,7 @@ namespace IISAS.xaml_window.salterski_radnik
         public void LoadAll()
         {
             lvDataBinding.Items.Clear();
-            voznje = voznjaService.OrderedVoznja();
+            voznje = voznjaService.OrderedVoznjaSR();
 
             foreach (Model.Voznja voznja in voznje)
             {
@@ -57,14 +57,13 @@ namespace IISAS.xaml_window.salterski_radnik
         public void LoadStanice()
         {
             cbKrajnjaStanica.Items.Clear();
-            cbPocetnaStanica.Items.Clear();
+            
             var stanicaRepository = new Repository.StanicaRepository(new ASContext());
             var stanicaService = new Service.StanicaService(stanicaRepository);
             List<Model.Stanica> stanice = stanicaService.GetAll();
             foreach (Model.Stanica stanica in stanice)
             {
                 cbKrajnjaStanica.Items.Add(stanica.naz_stan);
-                cbPocetnaStanica.Items.Add(stanica.naz_stan);
             }
         }
 
@@ -73,8 +72,15 @@ namespace IISAS.xaml_window.salterski_radnik
             int brojac = 0; 
             if ((Regex.IsMatch(tbVreme.Text, @"^([01]?[0-9]|2[0-3]):[0-5][0-9]$")) || (tbVreme.Text == ""))
             {
-                voznje = voznjaService.SearchByParam(cbPocetnaStanica.Text, cbKrajnjaStanica.Text, tbVreme.Text, dpDatum.Text);
+                voznje = voznjaService.SearchByParam(lbPocetna.Content.ToString(), cbKrajnjaStanica.Text, tbVreme.Text, dpDatum.Text);
                 lvDataBinding.Items.Clear();
+
+                if (cbPrevoznik.SelectedItem != null)
+                {
+                    voznje = voznjaService.SearchByPrevoznik(voznje, cbPrevoznik.Text);
+                }
+
+                voznje = voznjaService.FilterByTipPuta(cbAutoput.IsChecked.Value, cbSporedniPut.IsChecked.Value, voznje);
 
                 foreach (Model.Voznja voznja in voznje)
                 {
@@ -82,11 +88,11 @@ namespace IISAS.xaml_window.salterski_radnik
                     brojac++; 
                 }
                 if(brojac==0)
-                    MessageBox.Show("Za datu pretragu ne postoje vožnje!", "Informacija!", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Za datu pretragu ne postoje vožnje!", "Raketa", MessageBoxButton.OK, MessageBoxImage.Information);
 
             }
             else
-                MessageBox.Show("Vreme Vam nije u dobrom formatu! Trebalo bi da bude npr. 14:30!", "Upozorenje!", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Vreme Vam nije u dobrom formatu! Trebalo bi da bude npr. 14:30!", "Raketa", MessageBoxButton.OK, MessageBoxImage.Warning);
             
         }
 
@@ -110,17 +116,17 @@ namespace IISAS.xaml_window.salterski_radnik
                     }
                     else
                     {
-                        MessageBox.Show("Za izabranu voznju nema slobodnih karata!", "Upozorenje!", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        MessageBox.Show("Za izabranu voznju nema slobodnih karata!", "Raketa", MessageBoxButton.OK, MessageBoxImage.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Neuspešna kupovina! Ne možete kupiti kartu čiji je datum istekao!", "Neuspešno!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Neuspešna kupovina! Ne možete kupiti kartu čiji je datum istekao!", "Raketa", MessageBoxButton.OK, MessageBoxImage.Error);
 
                 }
             }
             else
-                MessageBox.Show("Molim Vas selektujte vožnju za koju želite da kupite kartu!", "Upozorenje!", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Molim Vas selektujte vožnju za koju želite da kupite kartu!", "Raketa", MessageBoxButton.OK, MessageBoxImage.Warning);
 
         }
 
@@ -154,6 +160,18 @@ namespace IISAS.xaml_window.salterski_radnik
             var ik = new IISAS.xaml_window.salterski_radnik.Izdate_karte(korisnik);
             ik.Show();
             this.Close();
+        }
+
+        private void KrajnjaStanicaChanged(object sender, SelectionChangedEventArgs e)
+        {
+            cbPrevoznik.Items.Clear();
+            foreach (Voznja voznja in voznjaService.FilterByKrajnja(cbKrajnjaStanica.Text.ToString()))
+            {
+                if (!cbPrevoznik.Items.Contains(voznja.autobus.autoprev.naziv_prev))
+                {
+                    cbPrevoznik.Items.Add(voznja.autobus.autoprev.naziv_prev);
+                }
+            }
         }
     }
 }

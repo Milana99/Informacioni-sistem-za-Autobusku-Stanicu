@@ -158,9 +158,11 @@
     <Compile Include="Model\Autoprevoznik.cs" />
     <Compile Include="Model\Karta.cs" />
     <Compile Include="Model\Korisnik.cs" />
+    <Compile Include="Model\Obavestenje.cs" />
     <Compile Include="Model\Peron.cs" />
     <Compile Include="Model\Stanica.cs" />
     <Compile Include="Model\Voznja.cs" />
+    <Compile Include="Repository\ObavestenjeRepository.cs" />
     <Compile Include="Repository\AutobusRepository.cs" />
     <Compile Include="Repository\AutoprevoznikRepository.cs" />
     <Compile Include="Repository\GenericRepository.cs" />
@@ -169,6 +171,7 @@
     <Compile Include="Repository\PeronRepository.cs" />
     <Compile Include="Repository\StanicaRepository.cs" />
     <Compile Include="Repository\VoznjaRepository.cs" />
+    <Compile Include="Service\ObavestenjeService.cs" />
     <Compile Include="Service\AutobusService.cs" />
     <Compile Include="Service\AutoprevoznikService.cs" />
     <Compile Include="Service\GenericService.cs" />
@@ -224,6 +227,9 @@
     </Compile>
     <Compile Include="xaml_window\korisnik_stan_usluga\Kupovina_karte.xaml.cs">
       <DependentUpon>Kupovina_karte.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_window\korisnik_stan_usluga\Pregeld_rezervisanih_karata_obavestenje.xaml.cs">
+      <DependentUpon>Pregeld_rezervisanih_karata_obavestenje.xaml</DependentUpon>
     </Compile>
     <Compile Include="xaml_window\korisnik_stan_usluga\Pregled_kupljenih_karata.xaml.cs">
       <DependentUpon>Pregled_kupljenih_karata.xaml</DependentUpon>
@@ -370,6 +376,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="xaml_window\korisnik_stan_usluga\Kupovina_karte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml_window\korisnik_stan_usluga\Pregeld_rezervisanih_karata_obavestenje.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

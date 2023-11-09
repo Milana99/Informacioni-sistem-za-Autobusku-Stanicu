@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,6 +28,11 @@ namespace IISAS.xaml_window.korisnik_stan_usluga
             InitializeComponent();
             this.pkk = pkk;
             this.karta = karta;
+            if(karta.ocena != null)
+            {
+                tbOcena.Text= karta.ocena.ToString();
+                tbOcena.IsEnabled = false;
+            }
             LoadAll();
         }
 
@@ -49,12 +55,41 @@ namespace IISAS.xaml_window.korisnik_stan_usluga
 
         private void Oceni(object sender, RoutedEventArgs e)
         {
+            if(!Regex.IsMatch(tbOcena.Text, @"^[1-5]$"))
+            {
+                MessageBox.Show("Molim Vas unesite pravilno ocenu!", "Upozorenje", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                karta.OceniKartu(int.Parse(tbOcena.Text));
+                pkk.Load();
+                MessageBox.Show("Uspešno ste ocenili kartu!", "Uspešno", MessageBoxButton.OK, MessageBoxImage.Information);
 
+                this.Close();
+            }
+            
         }
 
         private void Izadji(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void tbOcena_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!Regex.IsMatch(tbOcena.Text, @"^[1-5]$"))
+            {
+                tbOcena.Foreground = new SolidColorBrush(Colors.Red);
+                errorLbOcena.Foreground = new SolidColorBrush(Colors.Red);
+                errorLbOcena.Content = "Ocena mora da bude od 1 do 5!!";
+            }
+
+            else
+            {
+                tbOcena.Foreground = new SolidColorBrush(Colors.Green);
+                errorLbOcena.Foreground = new SolidColorBrush(Colors.Green);
+                errorLbOcena.Content = "Ocena je u redu!";
+            }
         }
     }
 }

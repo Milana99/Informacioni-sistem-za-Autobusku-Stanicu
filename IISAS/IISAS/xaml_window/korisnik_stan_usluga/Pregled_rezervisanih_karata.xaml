@@ -73,7 +73,7 @@
                             <SolidColorBrush Color="#FF1D3045" Opacity="0"/>
                         </ListViewItem.Background>
                         <StackPanel Orientation="Horizontal" >
-                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE787;" Margin="0,0,10,0">
+                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE787;" Margin="0,0,0,0">
                                 <Label.Background>
                                     <SolidColorBrush Color="#FF1D3045" Opacity="0"/>
                                 </Label.Background>
@@ -89,7 +89,7 @@
                             <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
                         </ListViewItem.Background>
                         <StackPanel Orientation="Horizontal" >
-                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE14D;" Margin="0,0,10,0">
+                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE14D;" Margin="0,0,0,0">
                                 <Label.Background>
                                     <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
                                 </Label.Background>
@@ -102,7 +102,7 @@
                             <SolidColorBrush Color="#FF1D3045" Opacity="0"/>
                         </ListViewItem.Background>
                         <StackPanel Orientation="Horizontal" >
-                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE8FD;" Margin="0,0,10,0">
+                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE8FD;" Margin="0,0,0,0">
                                 <Label.Background>
                                     <SolidColorBrush Color="#FF1D3045" Opacity="0"/>
                                 </Label.Background>
@@ -115,7 +115,7 @@
                             <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
                         </ListViewItem.Background>
                         <StackPanel Orientation="Horizontal" >
-                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEF3F;" Margin="0,0,10,0">
+                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEF3F;" Margin="0,0,0,0">
                                 <Label.Background>
                                     <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
                                 </Label.Background>
@@ -128,12 +128,12 @@
                             <SolidColorBrush Color="#FF1D3045" />
                         </ListViewItem.Background>
                         <StackPanel Orientation="Horizontal" >
-                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xF571;" Margin="0,0,10,0">
+                            <Label FontSize="25" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xF571;" Margin="0,0,0,0">
                                 <Label.Background>
                                     <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
                                 </Label.Background>
                             </Label>
-                            <Label Foreground="White">Pregled rezervisanih karata</Label>
+                            <Label Foreground="White">Kupovina rezervisanih karata</Label>
                         </StackPanel>
                     </ListViewItem>
                     
@@ -195,7 +195,8 @@
         <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" Grid.RowSpan="2" Margin="20,20,15,0" Orientation="Horizontal">
             <Label FontWeight="Bold" FontSize="15">Filtriraj podatke po:</Label>
             <StackPanel Orientation="Vertical" Grid.Row="5" Grid.Column="2" Margin="20,5,0,0" Grid.ColumnSpan="3" Width="190">
-                <RadioButton IsChecked="True" Name="rbPolaznaStanica" FontSize="15"  Margin="0,0,0,10"   Content="Polaznoj stanici"  Height="20" />
+                <RadioButton Name="rbIDKarte" IsChecked="True" FontSize="15"  Margin="0,0,0,10"   Content="ID rezervacije"  Height="20" />
+                <RadioButton  Name="rbPolaznaStanica"  FontSize="15"  Margin="0,0,0,10"   Content="Polaznoj stanici"  Height="20" />
                 <RadioButton Name="rbKrajnjaStanica" FontSize="15" Margin="0,0,0,10"   Content="Krajnjoj stanici"  Height="20" />
                 <RadioButton Name="rbPrevoznik" FontSize="15"  Margin="0,0,0,10"   Content="Prevozniku"  Height="20" />
                 <RadioButton Name="rbDatum" FontSize="15"  Content="Datumu"  Height="20" />
@@ -205,6 +206,16 @@
             <TextBox Width="150" Height="30" VerticalAlignment="Top" Margin="0,5,0,0" Name="tbPretraga" FontSize="15" Foreground="Gray" LostFocus="tbSearch_LostFocus" GotFocus="tbSearch_GotFocus" TextChanged="tbSearch_TextChanged"   >Pretraga karata...</TextBox>
             <Label FontSize="20" FontFamily="Segoe MDL2 Assets" Content="&#xE721;" Height="30" Foreground="Gray" Margin="0,5,0,0" VerticalAlignment="Top"></Label>
 
+            
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,0" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="4">
+            <Border CornerRadius="1" BorderThickness="1" Height="30" Width="30">
+                
+            <Button Width="30" Height="30" FontSize="20" Foreground="Red" Background="#FFEDEDED" FontFamily="Segoe MDL2 Assets" Content="&#xEDB1;" Name="btnObavestenje" Click="btnObavestenje_Click" >
+                
+            </Button>
+            </Border>
+            <Label Name="lbObavestenje" Foreground="Red" VerticalContentAlignment="Center">0</Label>
         </StackPanel>
 
 
@@ -215,11 +226,13 @@
                 </ListView.Background>
                 <ListView.View>
                     <GridView >
-                        <GridViewColumn Header="Prevoznik" Width="Auto" DisplayMemberBinding="{Binding voznja.autobus.autoprev.naziv_prev}"></GridViewColumn>
-                        <GridViewColumn Header="Datum" Width="Auto" DisplayMemberBinding="{Binding voznja.datum}"></GridViewColumn>
+                        <GridViewColumn Header="Id rezervacije" Width="Auto" DisplayMemberBinding="{Binding id_karte}"></GridViewColumn>
+
+                         <GridViewColumn Header="Datum" Width="Auto" DisplayMemberBinding="{Binding voznja.datum}"></GridViewColumn>
 
                         <GridViewColumn Header="Polazna stanica" Width="Auto" DisplayMemberBinding="{Binding voznja.polazna_stan.naz_stan}"></GridViewColumn>
                         <GridViewColumn Header="Krajnja stanica" Width="Auto" DisplayMemberBinding="{Binding voznja.krajnja_stan.naz_stan}"></GridViewColumn>
+                        <GridViewColumn Header="Prevoznik" Width="Auto" DisplayMemberBinding="{Binding voznja.autobus.autoprev.naziv_prev}"></GridViewColumn>
 
                         <GridViewColumn Header="Preko" Width="Auto" DisplayMemberBinding="{Binding voznja.preko}" />
                         <GridViewColumn Header="Polazak" DisplayMemberBinding="{Binding voznja.pol_sat}" Width="Auto"></GridViewColumn>

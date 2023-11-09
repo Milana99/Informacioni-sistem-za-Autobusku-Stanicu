@@ -155,10 +155,7 @@
                         </Border>
                     </StackPanel>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="2" Margin="0,10,0,0" Grid.ColumnSpan="3" Width="200">
-                    <RadioButton Name="rbPayPal" FontSize="20"  Margin="0,0,40,0"   Content="PayPal"  />
-                    <RadioButton Name="rbKartica" FontSize="20"   Content="Kartica"   />
-                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="2" Margin="0,10,0,0" Grid.ColumnSpan="3" Width="200"/>
             </StackPanel>
         </Border>
         <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" Orientation="Horizontal">

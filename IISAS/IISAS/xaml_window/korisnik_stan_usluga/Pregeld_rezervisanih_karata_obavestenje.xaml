@@ -1,0 +1,105 @@
+﻿<Window x:Class="IISAS.xaml_window.korisnik_stan_usluga.Pregeld_rezervisanih_karata_obavestenje"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IISAS.xaml_window.korisnik_stan_usluga"
+        mc:Ignorable="d"
+                Title="Raketa" Icon="slike\space.ico" Height="450" Width="500" WindowStartupLocation="CenterScreen" MaxHeight="450" MaxWidth="500">
+    <Grid Background="#FF153B64">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="110"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+            <Border.Background>
+                <ImageBrush ImageSource="slike\_Pngtree_blue technology sense abstract floating_5439768.png" Stretch="UniformToFill" TileMode="FlipY" Opacity="1">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Border.Background>
+        </Border>
+
+        <Border Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="3" Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5">
+            <Border.Background>
+                <ImageBrush ImageSource="slike\_Pngtree_blue technology sense abstract floating_5439768.png" Stretch="UniformToFill" TileMode="FlipY" Opacity="1">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Border.Background>
+        </Border>
+
+        <Border Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="6" Width="350" Grid.RowSpan="6" BorderBrush="#FF1D3045" BorderThickness="0"  Margin="0,20,0,60">
+            <StackPanel Grid.Row="0" Grid.ColumnSpan="5" Orientation="Vertical" >
+                <StackPanel.Background>
+                    <SolidColorBrush Color="#FFE0E9F3" Opacity="0.9"/>
+                </StackPanel.Background>
+                <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="4" Margin="20, 90,0,0" Grid.RowSpan="5">
+                    <StackPanel Orientation="Horizontal"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="4" Margin="0,40,0,0" Grid.RowSpan="5">
+                    <StackPanel Orientation="Horizontal"/>
+                </StackPanel>
+
+            </StackPanel>
+        </Border>
+
+        <Label Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30">Obaveštenja</Label>
+
+        <StackPanel Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center"  Grid.ColumnSpan="6" Orientation="Horizontal">
+            
+            <Button Width="120" Height="40" Background="#FFEDEDED" Foreground="Black" Margin="0,10,20,0" FontSize="15" Click="Izadji" BorderBrush="#FF4D4D4D" BorderThickness="1,1,2,2">
+                <StackPanel Orientation="Horizontal" >
+                    <Label FontSize="20" Background="#FFEDEDED" Foreground="Black" FontFamily="Segoe MDL2 Assets" Content="&#xE72B;" Margin="0,0,0,0"></Label>
+                    <Label Foreground="Black" FontSize="15">Izađi</Label>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="6" Margin="100,0,100,0">
+            <ListView Name="lvDataBinding" Margin ="0, 0, 0, 0" Height="230" BorderBrush="#FF001B62">
+                <ListView.Background>
+                    <SolidColorBrush Color="#FFFAFAFB" Opacity="0.9"/>
+                </ListView.Background>
+                <ListView.View>
+                    <GridView >
+                        <GridViewColumn Header="Poruka" Width="Auto" DisplayMemberBinding="{Binding poruka}"></GridViewColumn>
+                        <GridViewColumn Header="Polazna stanica" Width="Auto" DisplayMemberBinding="{Binding voznja.polazna_stan.naz_stan}"></GridViewColumn>
+                        <GridViewColumn Header="Krajnja stanica" Width="Auto" DisplayMemberBinding="{Binding voznja.krajnja_stan.naz_stan}"></GridViewColumn>
+                        <GridViewColumn  Header="Prevoznik" Width="Auto" DisplayMemberBinding="{Binding voznja.autobus.autoprev.naziv_prev}"></GridViewColumn>
+                        <GridViewColumn  Header="Datum" Width="Auto" DisplayMemberBinding="{Binding voznja.datum}"></GridViewColumn>
+                        <GridViewColumn Header="Polazak" DisplayMemberBinding="{Binding voznja.pol_sat}" Width="Auto"></GridViewColumn>
+                        <GridViewColumn Header="Dolazak" DisplayMemberBinding="{Binding voznja.dol_sat}" Width="Auto"></GridViewColumn>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+
+
+    </Grid>
+</Window>

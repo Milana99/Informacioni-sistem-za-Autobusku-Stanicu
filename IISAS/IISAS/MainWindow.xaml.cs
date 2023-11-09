@@ -55,10 +55,6 @@ namespace IISAS
             lvDataBinding.Items.Clear();
             voznje = voznjaService.GetAll();
 
-            foreach (Model.Voznja voznja in voznje)
-            {
-                lvDataBinding.Items.Add(voznja);
-            }
             LoadStanice();
 
         }

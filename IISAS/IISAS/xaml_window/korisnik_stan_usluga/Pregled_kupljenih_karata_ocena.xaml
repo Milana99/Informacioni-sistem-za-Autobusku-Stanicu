@@ -55,7 +55,7 @@
         </Border>
 
 
-        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Width="400" Grid.RowSpan="6" Margin="20,0,20,80">
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Width="400" Grid.RowSpan="6" Margin="20,0,20,60">
             <StackPanel Grid.Row="0" Grid.ColumnSpan="5" Orientation="Vertical" >
                 <StackPanel.Background>
                     <SolidColorBrush Color="#FFE0E9F3" Opacity="0.9"/>
@@ -129,7 +129,7 @@
                     <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="4" Margin="20, 0,0,0" Grid.RowSpan="5">
                         <StackPanel Orientation="Horizontal">
                             <Label FontWeight="Bold"  Margin="20,0,95,0">Vrsta karte:</Label>
-                            <Label Width="90" Name="lbVrstaKarte" >Vrsta karte</Label>
+                            <Label Width="170" Name="lbVrstaKarte" >Vrsta karte</Label>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="4" Margin="20, 0,0,0" Grid.RowSpan="5">
@@ -156,9 +156,10 @@
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal"   Margin="30,5,0,0">
-                    <Label FontWeight="Bold" FontSize="15" Margin="0,0,30,0">Upisite ocenu (od 1 do 5):</Label>
-                    <TextBox Name="tbOcena" Width="50" Height="25"></TextBox>
+                    <Label FontWeight="Bold" FontSize="15" Margin="0,0,10,0">Upisite ocenu (od 1 do 5):</Label>
+                    <TextBox Name="tbOcena" Width="50" Height="25" TextChanged="tbOcena_TextChanged"></TextBox>
                 </StackPanel>
+                <Label Width="180" Height="30" Margin="210,0,0,0" Name="errorLbOcena"></Label>
             </StackPanel>
         </Border>
         <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" Orientation="Horizontal">

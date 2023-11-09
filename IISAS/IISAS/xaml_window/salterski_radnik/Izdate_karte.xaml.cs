@@ -40,7 +40,7 @@ namespace IISAS.xaml_window.salterski_radnik
         public void Load()
         {
             lvDataBinding.Items.Clear();
-            karte = kartaService.GetAllOrdered();
+            karte = kartaService.GetAllOrderedBySalterskiRadnik();
 
             foreach (Model.Karta karta in karte)
             {
@@ -112,60 +112,11 @@ namespace IISAS.xaml_window.salterski_radnik
             }
             else
             {
-                MessageBox.Show("Molim Vas selektujte vožnju za koju želite da vidite detalje!", "Upozorenje!", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Molim Vas selektujte vožnju za koju želite da vidite detalje!", "Raketa", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
-        private void tbPolazna_LostFocus(object sender, RoutedEventArgs e)
-        {
-            tbPretragaPolazna.Foreground = new SolidColorBrush(Colors.Gray);
-            if (tbPretragaPolazna.Text == "")
-            {
-                tbPretragaPolazna.Text = "Polazna stanica...";
-            }
-        }
-
-        private void tbPolazna_GotFocus(object sender, RoutedEventArgs e)
-        {
-            if (tbPretragaPolazna.Text == "Polazna stanica...")
-            {
-                tbPretragaPolazna.Clear();
-            }
-            tbPretragaPolazna.Foreground = new SolidColorBrush(Colors.Black);
-        }
-
-        private void tbPolazna_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (tbPretragaPolazna.Text != "Polazna stanica...")
-            {
-                List<Model.Karta> karte = new List<Model.Karta>();
-
-                if (rbKrajnjaStanica.IsChecked == true && rbPrevoznik.IsChecked == true && tbPretragaKrajnja.Text != "Krajnja stanica..." && tbPretragaPrevoznik.Text != "Prevoznik...")
-                {
-                    karte = kartaService.filterByKrajnjaPolaznaIPrevoznik(tbPretragaKrajnja.Text, tbPretragaPolazna.Text, tbPretragaPrevoznik.Text, dpDatum.Text);
-                }
-                else if (rbKrajnjaStanica.IsChecked == true && tbPretragaKrajnja.Text != "Krajnja stanica...")
-                {
-                    karte = kartaService.filterByKrajnjaIPolazna(tbPretragaKrajnja.Text, tbPretragaPolazna.Text, dpDatum.Text);
-                }
-                else if (rbPrevoznik.IsChecked == true && tbPretragaPrevoznik.Text != "Prevoznik...")
-                {
-                    karte = kartaService.filterByPolaznaIPrevoznik(tbPretragaKrajnja.Text, tbPretragaPrevoznik.Text, dpDatum.Text);
-                }
-                else
-                    karte = kartaService.filterByPolazna(tbPretragaPolazna.Text, dpDatum.Text);
-
-                lvDataBinding.Items.Clear();
-                foreach (Model.Karta karta in karte)
-                {
-                    if (karta.rezervisana == 0)
-                    {
-                        lvDataBinding.Items.Add(karta);
-                    }
-
-                }
-            }
-        }
+      
 
         private void tbKrajnja_LostFocus(object sender, RoutedEventArgs e)
         {
@@ -191,15 +142,7 @@ namespace IISAS.xaml_window.salterski_radnik
             {
                 List<Model.Karta> karte = new List<Model.Karta>();
                 
-                if (rbPolaznaStanica.IsChecked == true && rbPrevoznik.IsChecked == true && tbPretragaPolazna.Text != "Polazna stanica..." && tbPretragaPrevoznik.Text != "Prevoznik...")
-                {
-                    karte = kartaService.filterByKrajnjaPolaznaIPrevoznik(tbPretragaKrajnja.Text, tbPretragaPolazna.Text, tbPretragaPrevoznik.Text, dpDatum.Text);
-                }
-                else if (rbPolaznaStanica.IsChecked == true && tbPretragaPolazna.Text != "Polazna stanica...")
-                {
-                    karte = kartaService.filterByKrajnjaIPolazna(tbPretragaKrajnja.Text, tbPretragaPolazna.Text, dpDatum.Text);
-                }
-                else if(rbPrevoznik.IsChecked == true && tbPretragaPrevoznik.Text != "Prevoznik...")
+               if(rbPrevoznik.IsChecked == true && tbPretragaPrevoznik.Text != "Prevoznik...")
                 {
                     karte = kartaService.filterByKrajnjaIPrevoznik(tbPretragaKrajnja.Text, tbPretragaPrevoznik.Text, dpDatum.Text);
                 }
@@ -242,15 +185,7 @@ namespace IISAS.xaml_window.salterski_radnik
             {
                 List<Model.Karta> karte = new List<Model.Karta>();
 
-                if (rbPolaznaStanica.IsChecked == true && rbKrajnjaStanica.IsChecked == true && tbPretragaPolazna.Text != "Polazna stanica..." && tbPretragaKrajnja.Text != "Krajnja stanica...")
-                {
-                    karte = kartaService.filterByKrajnjaPolaznaIPrevoznik(tbPretragaKrajnja.Text, tbPretragaPolazna.Text, tbPretragaPrevoznik.Text, dpDatum.Text);
-                }
-                else if (rbPolaznaStanica.IsChecked == true && tbPretragaPolazna.Text != "Polazna stanica...")
-                {
-                    karte = kartaService.filterByPolaznaIPrevoznik(tbPretragaPolazna.Text, tbPretragaPrevoznik.Text, dpDatum.Text);
-                }
-                else if (rbKrajnjaStanica.IsChecked == true && tbPretragaKrajnja.Text != "Krajnja stanica...")
+                if (rbKrajnjaStanica.IsChecked == true && tbPretragaKrajnja.Text != "Krajnja stanica...")
                 {
                     karte = kartaService.filterByKrajnjaIPrevoznik(tbPretragaKrajnja.Text, tbPretragaPrevoznik.Text, dpDatum.Text);
                 }
@@ -272,7 +207,7 @@ namespace IISAS.xaml_window.salterski_radnik
         private void dpDatum_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
             lvDataBinding.Items.Clear();
-            karte = kartaService.GetAllOrdered();
+            karte = kartaService.GetAllOrderedBySalterskiRadnik();
 
             foreach (Model.Karta karta in karte)
             {

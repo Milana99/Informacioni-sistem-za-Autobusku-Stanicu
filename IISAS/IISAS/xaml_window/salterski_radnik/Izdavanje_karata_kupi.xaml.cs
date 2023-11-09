@@ -1,4 +1,5 @@
-﻿using IISAS.xaml_window.korisnik_stan_usluga;
+﻿using IISAS.Model;
+using IISAS.xaml_window.korisnik_stan_usluga;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,6 +54,25 @@ namespace IISAS.xaml_window.salterski_radnik
         private void Izadji(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void tbUsername_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var asContext = new ASContext();
+            var korisnikRepository = new Repository.KorisnikRepository(asContext);
+            var korisnikService = new Service.KorisnikService(korisnikRepository);
+            Korisnik korisnik = new Korisnik();
+            korisnik = korisnikService.GetOne(tbKorisnickoIme.Text);
+
+            if (korisnik!=null)
+            { 
+                    lbErrorKorisnickoIme.Content = "Korisničko ime postoji!";
+            }
+            else
+            {
+                lbErrorKorisnickoIme.Content = "Korisničko ime ne postoji!";
+
+            }
         }
     }
 }

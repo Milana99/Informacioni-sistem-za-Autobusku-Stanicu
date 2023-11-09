@@ -26,7 +26,17 @@ namespace IISAS.Service
                 .ToList();
         }
 
-       
+        public List<Model.Karta> GetAllOrderedBySalterskiRadnik()
+        {
+            return repository.Load()
+                .Where(karta => karta.voznja.polazna_stan.naz_stan.Contains("Sid AS"))
+                .OrderBy(karta => karta.voznja.datum)
+                .ThenBy(karta => karta.voznja.pol_sat)
+                .ThenBy(karta => karta.voznja.dol_sat)
+                .ToList();
+        }
+
+
         public List<Model.Karta> filterByPolazna(String polaznaStanica, Model.Korisnik korisnik)
         {
             return repository.Load()
@@ -34,6 +44,12 @@ namespace IISAS.Service
                 .OrderBy(karta => karta.voznja.datum)
                 .ThenBy(karta => karta.voznja.pol_sat)
                 .ToList();
+        }
+        
+        public List<Model.Karta> GetAllByVoznja(Model.Voznja voznja)
+        {
+            return repository.Load()
+                .Where(karta => karta.voznjaId == voznja.id_voz).ToList();
         }
 
         public List<Model.Karta> filterByKrajnja(String krajnjaStanica, Model.Korisnik korisnik)
@@ -82,6 +98,16 @@ namespace IISAS.Service
             return repository.Load()
                 .Where(karta => karta.korisnik.id_kor == korisnik.id_kor)
                 .ToList();
+        }
+
+        public List<Model.Karta> GetRecentByKorisnik(Model.Korisnik korisnik)
+        {
+            var karte = getKarteByKorisnik(korisnik)
+                .OrderByDescending(karta => karta.datum)
+                .Take(5)
+                .ToList();
+
+            return karte;
         }
 
         public List<Model.Karta> getKarteByKorisnikOrdered(Model.Korisnik korisnik)
@@ -160,7 +186,8 @@ namespace IISAS.Service
         public List<Model.Karta> filterByKrajnja(string krajnjaStanica, string datum)
         {
             return repository.Load()
-                .Where(karta => karta.voznja.krajnja_stan.naz_stan.Contains(krajnjaStanica) & karta.voznja.datum == datum)
+                .Where(karta => karta.voznja.krajnja_stan.naz_stan.Contains(krajnjaStanica) & karta.voznja.datum == datum
+                & karta.voznja.polazna_stan.naz_stan == "Sid AS")
                 .OrderBy(karta => karta.voznja.pol_sat)
                 .ThenBy(karta => karta.voznja.dol_sat)
                 .ToList();
@@ -189,7 +216,7 @@ namespace IISAS.Service
         {
             return repository.Load()
                 .Where(karta => karta.voznja.krajnja_stan.naz_stan.Contains(krajnjaStanica) & karta.voznja.autobus.autoprev.naziv_prev.Contains(prevoznik)
-                & karta.voznja.datum == datum)
+                & karta.voznja.datum == datum & karta.voznja.polazna_stan.naz_stan == "Sid AS")
                 .OrderBy(karta => karta.voznja.pol_sat)
                 .ThenBy(karta => karta.voznja.dol_sat)
                 .ToList();
@@ -198,7 +225,8 @@ namespace IISAS.Service
         public List<Model.Karta> filterByPrevoznik(string nazivPrevoznika, string datum)
         {
             return repository.Load()
-                .Where(karta => karta.voznja.autobus.autoprev.naziv_prev.Contains(nazivPrevoznika) & karta.voznja.datum == datum)
+                .Where(karta => karta.voznja.autobus.autoprev.naziv_prev.Contains(nazivPrevoznika) & karta.voznja.datum == datum
+                & karta.voznja.polazna_stan.naz_stan == "Sid AS")
                 .OrderBy(karta => karta.voznja.pol_sat)
                 .ThenBy(karta => karta.voznja.dol_sat)
                 .ToList();
@@ -225,6 +253,17 @@ namespace IISAS.Service
             return repository.Load()
                 .Where(karta => karta.korisnik.id_kor == korisnik.id_kor &&
                                 karta.voznja.polazna_stan.naz_stan.Contains(polaznaStanica))
+                .OrderByDescending(karta => karta.vazeca)
+                .ThenBy(karta => karta.voznja.datum)
+                .ThenBy(karta => karta.voznja.pol_sat)
+                .ToList();
+        }
+
+        public List<Model.Karta> filterByIdKarte(string idKarte, Model.Korisnik korisnik)
+        {
+            return repository.Load()
+                .Where(karta => karta.korisnik.id_kor == korisnik.id_kor &&
+                 karta.id_karte.ToString().Contains(idKarte))
                 .OrderByDescending(karta => karta.vazeca)
                 .ThenBy(karta => karta.voznja.datum)
                 .ThenBy(karta => karta.voznja.pol_sat)
@@ -262,6 +301,49 @@ namespace IISAS.Service
                 .ThenBy(karta => karta.voznja.datum)
                 .ThenBy(karta => karta.voznja.pol_sat)
                 .ToList();
+        }
+
+        public List<Model.Karta> filterByDatumSR(string datum)
+        {
+            return repository.Load()
+                .Where(karta => karta.voznja.polazna_stan.naz_stan == "Sid AS" &&
+                                karta.voznja.datum.Contains(datum))
+                .OrderBy(karta => karta.voznja.pol_sat)
+                .ThenBy(karta => karta.voznja.dol_sat)
+                .ToList();
+        }
+
+        public List<Model.Karta> filterByIdKarteSR(string id_karte)
+        {
+            return repository.Load()
+                .Where(karta => karta.voznja.polazna_stan.naz_stan == "Sid AS" &&
+                                karta.id_karte.ToString().Contains(id_karte))
+                .ToList();
+        }
+
+        public List<Model.Karta> filterByImeSR(string ime)
+        {
+            return repository.Load()
+                .Where(karta => karta.voznja.polazna_stan.naz_stan == "Sid AS" &&
+                                karta.ime != null && karta.ime.Contains(ime))
+                .OrderBy(karta => karta.voznja.datum)
+                .ThenBy(karta => karta.voznja.pol_sat)
+                .ThenBy(karta => karta.voznja.dol_sat)
+                .ToList();
+        }
+        public List<Model.Karta> filterByPrezimeSR(String prezime)
+        {
+           
+                return repository.Load()
+                .Where(karta => karta.voznja.polazna_stan.naz_stan == "Sid AS" &&
+                                karta.prezime != null && karta.prezime.Contains(prezime))
+                .OrderBy(karta => karta.voznja.datum)
+                .ThenBy(karta => karta.voznja.pol_sat)
+                .ThenBy(karta => karta.voznja.dol_sat)
+                .ToList();
+            
+            
+            
         }
 
         public List<Model.Karta> filterByPolaznaNevazecaUsername(string polaznaStanica, Model.Korisnik korisnik)

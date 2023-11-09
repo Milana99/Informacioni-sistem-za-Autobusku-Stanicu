@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace IISAS.xaml_window.salterski_radnik
 {
@@ -33,6 +34,8 @@ namespace IISAS.xaml_window.salterski_radnik
             Load();
         }
 
+        public int brojac_id { get; set; }
+
         public void Load()
         {
             float popust = 1;
@@ -48,9 +51,13 @@ namespace IISAS.xaml_window.salterski_radnik
             {
                 popust *= rezervisi.voznja.popustStudentska;
             }
+            var asContext = new ASContext();
+
+            brojac_id = 74;
+            lbIdKarte.Content = brojac_id;
+            
 
             lbCena.Content = rezervisi.voznja.cena * popust;
-
             lbStatusPutnika.Content = rezervisi.cbStatus.SelectedItem.ToString();
             lbDatum.Content = rezervisi.voznja.datum;
             lbKrajnjaStanica.Content = rezervisi.voznja.krajnja_stan.naz_stan;
@@ -63,6 +70,7 @@ namespace IISAS.xaml_window.salterski_radnik
             lbVremePolaska.Content = rezervisi.voznja.pol_sat;
             lbVrstaKarte.Content = rezervisi.cbTipKarte.Text;
             lbVremeKupovine.Content = DateTime.Now.ToString();
+
         }
 
         private void Rezervisi(object sender, RoutedEventArgs e)
@@ -70,20 +78,24 @@ namespace IISAS.xaml_window.salterski_radnik
             var asContext = new ASContext();
             var korisnikRepository = new Repository.KorisnikRepository(asContext);
             var korisnikService = new Service.KorisnikService(korisnikRepository);
-            Model.Korisnik korisnikk = korisnikService.GetOne(rezervisi.tbUsername.Text.ToString());
+            Model.Korisnik korisnikk = korisnikService.GetOne(rezervisi.tbKorisnickoIme.Text.ToString());
             var kartaRepository = new Repository.KartaRepository(asContext);
             var kartaService = new Service.KartaService(kartaRepository);
+            //Todo change this  to textbox.text
+            var ime = rezervisi.tbIme.Text;
+            var prezime = rezervisi.tbPrezime.Text;
             if (korisnikk == null)
             {
                 Model.Karta karta = new Model.Karta(rezervisi.voznja.id_voz, int.Parse(lbSediste.Content.ToString()),
-                    int.Parse(lbCena.Content.ToString()), lbVrstaKarte.Content.ToString() + "-" + lbStatusPutnika.Content.ToString(), "Vazeca", korisnik.id_kor, 1, lbVremeKupovine.Content.ToString(), korisnik.username);
+                    int.Parse(lbCena.Content.ToString()), lbVrstaKarte.Content.ToString() + "-" + lbStatusPutnika.Content.ToString(), "Vazeca", korisnik.id_kor, 1, lbVremeKupovine.Content.ToString(), korisnik.username, ime, prezime);
                 kartaService.CreateElement(karta);
             }
             else
             {
                 Model.Karta karta = new Model.Karta(rezervisi.voznja.id_voz, int.Parse(lbSediste.Content.ToString()),
-                  int.Parse(lbCena.Content.ToString()), lbVrstaKarte.Content.ToString() + "-" + lbStatusPutnika.Content.ToString(), "Vazeca", korisnikk.id_kor, 1, lbVremeKupovine.Content.ToString(), korisnik.username);
+                  int.Parse(lbCena.Content.ToString()), lbVrstaKarte.Content.ToString() + "-" + lbStatusPutnika.Content.ToString(), "Vazeca", korisnikk.id_kor, 1, lbVremeKupovine.Content.ToString(), korisnik.username, korisnikk.ime, korisnikk.prezime);
                 kartaService.CreateElement(karta);
+                brojac_id++;
             }
             rezervisi.voznja.brSlobodnih--;
 

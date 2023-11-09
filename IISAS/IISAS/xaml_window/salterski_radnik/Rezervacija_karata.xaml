@@ -27,7 +27,7 @@
             <ColumnDefinition Width="120"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Row="3" Grid.RowSpan="4" Grid.Column="2" Grid.ColumnSpan="4" Margin="20,0,15,85">
+        <Border Grid.Row="3" Grid.RowSpan="4" Grid.Column="2" Grid.ColumnSpan="4" Margin="20,5,15,85">
             <Border.Background>
                 <ImageBrush ImageSource="slike\pngegg.png" Stretch="UniformToFill"/>
             </Border.Background>
@@ -134,7 +134,7 @@
                                     <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
                                 </Label.Background>
                             </Label>
-                            <Label Foreground="White">Pregled rezervisanih karata</Label>
+                            <Label Foreground="White">Prodaja rezervisanih karata</Label>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>
@@ -155,7 +155,7 @@
                 </Label.Foreground>
                 <Label.Background>
                     <SolidColorBrush Color="Transparent"/>
-                </Label.Background> Izdavanje karte
+                </Label.Background> Rezervacija karte
             </Label>
             <Border Background="#FF835B06"  Width="220" Height="60" Margin="0,0,0,0">
                 <StackPanel Orientation="Horizontal" Width="220"  Margin="0,0,0,0" OpacityMask="#FF835B06" >
@@ -189,65 +189,63 @@
 
 
         </StackPanel>
+        <Border Grid.Column="2" BorderThickness="2" Opacity="0.7" VerticalAlignment="Top"  BorderBrush="White" Background="White" Grid.RowSpan="2" Height="140"  Margin="20,0,20,0" Grid.ColumnSpan="4" Grid.Row="1" ></Border>
 
-
-        <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" Grid.RowSpan="2" Margin="20,20,15,0" Orientation="Vertical">
+        <StackPanel Grid.Row="1" Grid.Column="2"  Grid.ColumnSpan="4" Grid.RowSpan="2" Margin="30,5,15,0" Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
-                <Label FontWeight="DemiBold"  FontSize="15" >Izaberite stanicu od:</Label>
-                <ComboBox Width="120" Margin="10,0,0,0" Name="cbPocetnaStanica"  FontSize="15"  BorderBrush="White">
-                    <ComboBox.Background>
-                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                            <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                            <GradientStop Color="White" Offset="1"/>
-                        </LinearGradientBrush>
-                    </ComboBox.Background>
-                </ComboBox>
-                <Label FontSize="20"  FontFamily="Segoe MDL2 Assets" Content="&#xE819;" Margin="0,0,10,0">
+                <Label FontWeight="DemiBold"  FontSize="14" >Izaberite stanicu od:</Label>
+                <Label Name="lbPocetna" Width="100" Margin="10,0,0,0" FontSize="14" >Sid AS</Label>
+                <Label FontSize="19"  FontFamily="Segoe MDL2 Assets" Content="&#xE819;" Margin="0,0,15,0">
                     <Label.Background>
                         <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
                     </Label.Background>
                 </Label>
 
-                <Label FontWeight="DemiBold" Margin="20,0,0,0" FontSize="15">Do:</Label>
-                <ComboBox Width="120" Name="cbKrajnjaStanica" Margin="20,0,0,0" FontSize="15"></ComboBox>
-                <Label FontSize="20"  FontFamily="Segoe MDL2 Assets" Content="&#xE81A;" Margin="0,0,10,0">
+                <Label FontWeight="DemiBold" Margin="20,0,0,0" FontSize="14">Do:</Label>
+                <ComboBox Width="120" Name="cbKrajnjaStanica" Margin="20,0,0,0" FontSize="14" SelectionChanged="KrajnjaStanicaChanged"></ComboBox>
+                <Label FontSize="19"  FontFamily="Segoe MDL2 Assets" Content="&#xE81A;" Margin="0,0,10,0">
                     <Label.Background>
                         <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
                     </Label.Background>
                 </Label>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Row="2"  Margin="0,40,0,0">
-                <Label  FontWeight="DemiBold" FontSize="15">Izaberite datum:</Label>
-                <DatePicker Width="150" Name="dpDatum" FontSize="15" Margin="30,0,0,0" ></DatePicker>
-                <Label  FontWeight="DemiBold" FontSize="15" Margin="35,0,0,0">Vreme:</Label>
-                <TextBox Width="120" Name="tbVreme" FontSize="15"></TextBox>
-                <Label FontSize="20"  FontFamily="Segoe MDL2 Assets" Content="&#xE121;" Margin="0,0,10,0">
-                    <Label.Background>
-                        <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
-                    </Label.Background>
-                </Label>
-            </StackPanel>
-            <Border>
-                <Border.Effect>
-                    <DropShadowEffect BlurRadius="10" Direction="200" ShadowDepth="0" Opacity="10"></DropShadowEffect>
+            <StackPanel Orientation="Horizontal" Grid.Row="2"  Margin="0,20,0,0">
+                <Label  FontWeight="DemiBold" FontSize="14">Izaberite prevoznika:</Label>
+                <ComboBox Width="120"  Name="cbPrevoznik" FontSize="14" Margin="10,0,45,0" ></ComboBox>
 
-                </Border.Effect>
-                <Button Width="120" HorizontalAlignment="Right" Foreground="White" Margin="0,20,5,0" Height="40" FontSize="15" Background="#FFEDEDED" BorderBrush="#FF194474" Click="Pretraga">
+                <CheckBox Width="90" VerticalContentAlignment="Center" Name="cbAutoput" FontSize="14">Autoput</CheckBox>
+                <CheckBox Width="120" VerticalContentAlignment="Center" Name="cbSporedniPut" FontSize="14">Sporedni put</CheckBox>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="2"  Margin="0,20,0,0">
+                <Label  FontWeight="DemiBold" FontSize="14">Izaberite datum:</Label>
+                <DatePicker Width="120"  Name="dpDatum" FontSize="14" Margin="38,0,0,0" ></DatePicker>
+                <Label  FontWeight="DemiBold" FontSize="14" Margin="42,0,0,0">Vreme:</Label>
+                <TextBox Width="120" Name="tbVreme" FontSize="14"></TextBox>
+                <Label FontSize="19"  FontFamily="Segoe MDL2 Assets" Content="&#xE121;" Margin="0,0,10,0">
+                    <Label.Background>
+                        <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
+                    </Label.Background>
+                </Label>
+            </StackPanel>
+          
+                <Button Width="100" HorizontalAlignment="Right" Foreground="White" Margin="0,18,5,0" Height="35" FontSize="14" Background="#FFEDEDED" BorderBrush="#FF194474" Click="Pretraga">
                     <StackPanel Orientation="Horizontal">
                         <Label  FontSize="15">Pretraga</Label>
-                        <Label FontSize="20" FontFamily="Segoe MDL2 Assets" Content="&#xE721;" Margin="0,0,10,0">
+                        <Label FontSize="19" FontFamily="Segoe MDL2 Assets" Content="&#xE721;" Margin="0,0,10,0">
                             <Label.Background>
                                 <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
                             </Label.Background>
                         </Label>
                     </StackPanel>
                 </Button>
-            </Border>
+           
 
         </StackPanel>
 
+       
 
-        <StackPanel Grid.Row="3" Grid.RowSpan="4" Grid.Column="2" Grid.ColumnSpan="4" Margin="20,0,15,0">
+        <StackPanel Grid.Row="3" Grid.RowSpan="4" Grid.Column="2" Grid.ColumnSpan="4" Margin="20,5,15,0">
             <ListView Name="lvDataBinding" Margin ="0, 0, 0, 0" Height="200" BorderBrush="#FF001B62">
                 <ListView.Background>
                     <SolidColorBrush Color="#FFFAFAFB" Opacity="0.9"/>
@@ -263,8 +261,7 @@
                         <GridViewColumn Header="Polazak" DisplayMemberBinding="{Binding pol_sat}" Width="Auto"></GridViewColumn>
                         <GridViewColumn Header="Dolazak" DisplayMemberBinding="{Binding dol_sat}" Width="Auto"></GridViewColumn>
                         <GridViewColumn Header="Cena" DisplayMemberBinding="{Binding cena}" Width="Auto"/>
-                        <GridViewColumn Header="Peron" DisplayMemberBinding="{Binding peron.naz_per}" Width="Auto"/>
-                        <GridViewColumn Header="Preostalih karata" DisplayMemberBinding="{Binding brSlobodnih}" Width="Auto"/>
+                         <GridViewColumn Header="Preostalih karata" DisplayMemberBinding="{Binding brSlobodnih}" Width="Auto"/>
 
                     </GridView>
                 </ListView.View>

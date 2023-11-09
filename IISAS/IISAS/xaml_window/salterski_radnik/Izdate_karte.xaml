@@ -134,7 +134,7 @@
                                     <SolidColorBrush Color="#FF0F2F5C" Opacity="0"/>
                                 </Label.Background>
                             </Label>
-                            <Label Foreground="White">Pregled rezervisanih karata</Label>
+                            <Label Foreground="White">Prodaja rezervisanih karata</Label>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>
@@ -194,27 +194,12 @@
             <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" Grid.RowSpan="2" Margin="20,20,15,10" Orientation="Horizontal">
             <Label FontWeight="Bold" FontSize="15">Filtriraj podatke po:</Label>
             <StackPanel Orientation="Vertical" Grid.Row="5" Grid.Column="2" Margin="20,5,0,0" Grid.ColumnSpan="3" Width="190">
-                <CheckBox x:Name="rbPolaznaStanica" FontSize="15"  Margin="0,0,0,18"   Content="Polaznoj stanici"  Height="20" />
-                <CheckBox x:Name="rbKrajnjaStanica" FontSize="15" Margin="0,0,0,18"   Content="Krajnjoj stanici"  Height="20" />
+                  <CheckBox x:Name="rbKrajnjaStanica" FontSize="15" Margin="0,0,0,18"   Content="Krajnjoj stanici"  Height="20" />
                 <CheckBox x:Name="rbPrevoznik" FontSize="15"  Margin="0,0,0,10"   Content="Prevozniku"  Height="20" />
              </StackPanel>
 
             <StackPanel>
-                <StackPanel Orientation="Horizontal" Name="spPretragaPolazna">
-            <TextBox Width="150" Height="30" VerticalAlignment="Top" Margin="0,5,0,0" Name="tbPretragaPolazna" FontSize="15" Foreground="Gray" LostFocus="tbPolazna_LostFocus" GotFocus="tbPolazna_GotFocus" TextChanged="tbPolazna_TextChanged"  >Polazna stanica...
-                        <TextBox.Style>
-                            <Style TargetType="TextBox">
-                                <Setter Property="Visibility" Value="Collapsed"/>
-                                <Style.Triggers>
-                                    <DataTrigger Binding="{Binding ElementName=rbPolaznaStanica, Path=IsChecked}" Value="True">
-                                        <Setter Property="Visibility" Value="Visible"/>
-                                    </DataTrigger>
-                                </Style.Triggers>
-                            </Style>
-                        </TextBox.Style>
-                    </TextBox>
-                    <Label FontSize="20" FontFamily="Segoe MDL2 Assets" Content="&#xE819;" Height="30" Foreground="Gray" Margin="0,5,0,0" VerticalAlignment="Top"></Label>
-                </StackPanel>
+                
                 <StackPanel Orientation="Horizontal" Name="spPretragaKrajnja">
                     <TextBox Width="150" Height="30" VerticalAlignment="Top" Margin="0,5,0,0" Name="tbPretragaKrajnja" FontSize="15" Foreground="Gray" LostFocus="tbKrajnja_LostFocus" GotFocus="tbKrajnja_GotFocus" TextChanged="tbKrajnja_TextChanged"  >Krajnja stanica...
                     <TextBox.Style>
@@ -262,13 +247,14 @@
                 </ListView.Background>
                 <ListView.View>
                     <GridView >
-                        <GridViewColumn Header="Prevoznik" Width="Auto" DisplayMemberBinding="{Binding voznja.autobus.autoprev.naziv_prev}"></GridViewColumn>
-                        <GridViewColumn Header="Datum" Width="Auto" DisplayMemberBinding="{Binding voznja.datum}"></GridViewColumn>
-
+                        
                         <GridViewColumn Header="Polazna stanica" Width="Auto" DisplayMemberBinding="{Binding voznja.polazna_stan.naz_stan}"></GridViewColumn>
                         <GridViewColumn Header="Krajnja stanica" Width="Auto" DisplayMemberBinding="{Binding voznja.krajnja_stan.naz_stan}"></GridViewColumn>
-
+                        <GridViewColumn Header="Prevoznik" Width="Auto" DisplayMemberBinding="{Binding voznja.autobus.autoprev.naziv_prev}"></GridViewColumn>
                         <GridViewColumn Header="Preko" Width="Auto" DisplayMemberBinding="{Binding voznja.preko}" />
+                        <GridViewColumn Header="Datum" Width="Auto" DisplayMemberBinding="{Binding voznja.datum}"></GridViewColumn>
+
+                        
                         <GridViewColumn Header="Polazak" DisplayMemberBinding="{Binding voznja.pol_sat}" Width="Auto"></GridViewColumn>
                         <GridViewColumn Header="Dolazak" DisplayMemberBinding="{Binding voznja.dol_sat}" Width="Auto"></GridViewColumn>
                         <GridViewColumn Header="Cena" DisplayMemberBinding="{Binding cena}" Width="Auto"/>

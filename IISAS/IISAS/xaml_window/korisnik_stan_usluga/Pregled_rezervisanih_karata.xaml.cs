@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -33,6 +34,7 @@ namespace IISAS.xaml_window.korisnik_stan_usluga
             var kartaRepository = new Repository.KartaRepository(new ASContext());
             kartaService = new Service.KartaService(kartaRepository);
             Load();
+
         }
 
         public void Load()
@@ -40,21 +42,35 @@ namespace IISAS.xaml_window.korisnik_stan_usluga
 
             lvDataBinding.Items.Clear();
             karte = kartaService.getKarteByKorisnikOrdered(korisnik);
-
+            var obavestenjeRepository = new Repository.ObavestenjeRepository(new ASContext());
+            var obavestenjeService = new Service.ObavestenjeService(obavestenjeRepository);
+            foreach(Obavestenje obavestenje in obavestenjeService.getAllByKorisnik(korisnik.username))
+            {
+                obavestenjeService.DeleteElement(obavestenje.id_obavestenja);
+            }
             foreach (Model.Karta karta in karte)
             {
                 if (karta.rezervisana == 1)
                 {
+                    
                     DateTime dt1 = DateTime.Parse(karta.voznja.datum.ToString()).Add(TimeSpan.Parse(karta.voznja.pol_sat.ToString()));
                     DateTime dt2 = DateTime.Now;
                     TimeSpan ts = dt1 - dt2;
                     double totalTime = ts.TotalHours;
                     if (totalTime > 24)
                     {
+                        if(totalTime < 48)
+                        {
+                            Obavestenje obavestenje = new Obavestenje(karta.korisnik.id_kor, karta.voznjaId, "Vaša rezervacija ističe za manje od 24h!");
+                            obavestenjeService.CreateElement(obavestenje);
+                        }
                         lvDataBinding.Items.Add(karta);
                     }
                     else
                     {
+                        Obavestenje obavestenje = new Obavestenje(karta.korisnik.id_kor, karta.voznjaId, "Vaša rezervacija za sledeću vožnju je istekla!");
+                        obavestenjeService.CreateElement(obavestenje);
+
                         kartaService.DeleteElement(karta.id_karte);
                         var voznjaRepository = new Repository.VoznjaRepository(new ASContext());
                         var voznjaService = new Service.VoznjaService(voznjaRepository);
@@ -63,7 +79,8 @@ namespace IISAS.xaml_window.korisnik_stan_usluga
 
                 }
             }
-
+            int brojObavestenja = obavestenjeService.getAllByKorisnik(korisnik.username).Count();
+            lbObavestenje.Content = brojObavestenja;
         }
 
         private void RedVoznje(object sender, RoutedEventArgs e)
@@ -188,6 +205,11 @@ namespace IISAS.xaml_window.korisnik_stan_usluga
                 {
                     karte = kartaService.filterByDatumUsername(tbPretraga.Text, korisnik);
                 }
+                else if(rbIDKarte.IsChecked == true)
+                {
+                        karte = kartaService.filterByIdKarte(tbPretraga.Text, korisnik);
+
+                }
                 else if (rbPolaznaStanica.IsChecked == true)
                 {
                     karte = kartaService.filterByPolaznaUsername(tbPretraga.Text, korisnik);
@@ -211,6 +233,12 @@ namespace IISAS.xaml_window.korisnik_stan_usluga
 
                 }
             }
+        }
+
+        private void btnObavestenje_Click(object sender, RoutedEventArgs e)
+        {
+            var prko = new IISAS.xaml_window.korisnik_stan_usluga.Pregeld_rezervisanih_karata_obavestenje(korisnik, this);
+            prko.ShowDialog();
         }
     }
 }

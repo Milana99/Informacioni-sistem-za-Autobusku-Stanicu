@@ -357,3 +357,5 @@ C:\Users\Administrator\Desktop\GitMilana\Informacioni-sistem-za-Autobusku-Stanic
 C:\Users\Administrator\Desktop\GitMilana\Informacioni-sistem-za-Autobusku-Stanicu\IISAS\IISAS\obj\Debug\IISAS.csproj.CopyComplete
 C:\Users\Administrator\Desktop\GitMilana\Informacioni-sistem-za-Autobusku-Stanicu\IISAS\IISAS\obj\Debug\IISAS.exe
 C:\Users\Administrator\Desktop\GitMilana\Informacioni-sistem-za-Autobusku-Stanicu\IISAS\IISAS\obj\Debug\IISAS.pdb
+C:\Users\Administrator\Desktop\GitMilana\Informacioni-sistem-za-Autobusku-Stanicu\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregeld_rezervisanih_karata_obavestenje.g.cs
+C:\Users\Administrator\Desktop\GitMilana\Informacioni-sistem-za-Autobusku-Stanicu\IISAS\IISAS\obj\Debug\xaml_window\korisnik_stan_usluga\Pregeld_rezervisanih_karata_obavestenje.baml

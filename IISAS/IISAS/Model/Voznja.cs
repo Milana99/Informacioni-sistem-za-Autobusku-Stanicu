@@ -16,6 +16,7 @@ namespace IISAS.Model
         public String dol_sat {get; set;}
         public String pol_sat { get; set; }
         private int? _polaznaStanicaId;
+        public float? ocena { get; set; }
 
         public int? polaznaStanicaId
         {
